@@ -1,0 +1,87 @@
+/* Futura fonts made from oNline Web Fonts are licensed by CC BY 3.0 */
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/Futura_Book.woff2") format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Futura"; 
+    src: url("../fonts/FuturaPT-Bold.woff2") format("woff2");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Futura Medium"; 
+    src: url("../fonts/Futura_Medium.woff2") format("woff2");
+    font-weight: bold;
+}
+  
+/* C64 Pro Mono courtesy of Style64.org - https://style64.org/c64-truetype */
+@font-face {
+    font-family: "C64-Pro-Mono"; 
+    src: url("../fonts/C64_Pro_Mono-STYLE.woff2") format("woff2");
+}
+  
+:root {
+    /* Commodore 64 "Pepto" Palette */ 
+    --c64-blk:    #000000;
+    --c64-grey1:  #4a4a4a;
+    --c64-grey2:  #7b7b7b;
+    --c64-grey3:  #b2b2b2;
+    --c64-white:  #ffffff;
+    --c64-red:    #813338;
+    --c64-ltred:  #c46c71;
+    --c64-brown:  #553800;
+    --c64-orange: #8e5029;
+    --c64-yellow: #edf171;
+    --c64-ltgreen:#a9ff9f;
+    --c64-green:  #56ac4d;
+    --c64-cyan:   #75cec8;
+    --c64-ltblue: #706deb;
+    --c64-blue:   #2e2c9b;
+    --c64-purple: #8e3c97;
+  
+    --primary-color:   var(--c64-blue);
+    --secondary-color: var(--c64-grey1) ;
+    --accent1-color:   var(--c64-ltblue);
+    --accent2-color:   var(--c64-grey3);
+    --accent3-color:   var(--c64-blk);
+
+    --code-font-color: var(--c64-grey1);
+    --code-bkg-color: var(--c64-grey3);
+    --code-border-color: var(--c64-blue);
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Futura", Helvetica, Arial, sans-serif;
+    --paragraph-font: "Futura", Helvetica, Arial, sans-serif;
+    --semibold-font: "Futura Medium", Helvetica, Arial, sans-serif;
+    --code-font: "C64-Pro-Mono", "Source Code Pro", Courier, monospace;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    
+    /* headlines on a white background */ 
+    --headline-color-on-white: var(--secondary-color);
+    
+    /* headlines on a colored background */ 
+    --headline-color-on-color: white;
+    
+    /* paragraph text on a white background */ 
+    --paragraph-color-on-white: var(--primary-color);
+    
+    /* paragraph text on a colored background */ 
+    --paragraph-color-on-color: var(--c64-white);
+  
+    /* colored background for paragraph text */
+    --paragraph-background-color:  var(--secondary-color);
+  
+    /* Navigation Colors */
+    --nav-link-color: var(--accent2-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: var(--c64-white);
+    --nav-hover-background-color: var(--c64-blue);
+    --nav-border-color: var(--c64-ltblue)
+}
+
+* {
+    font-family: var(--paragraph-font);
+}
+
