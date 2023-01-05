@@ -81,7 +81,22 @@
     --nav-border-color: var(--c64-ltblue)
 }
 
+
 * {
     font-family: var(--paragraph-font);
 }
+
+
+h1 {
+    color: var(--c64-blue);
+    text-transform: uppercase;
+}
+
+
+body {
+    line-height: 1.3em;
+}
+
+
+
 
