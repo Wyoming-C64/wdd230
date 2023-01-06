@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike Lewis">
+    <meta name="description" content="A landing page that serves as a portal to all of Mike Lewis' assignments for the WDD 230 Web Frontend Development class offered online from BYU-Idaho.">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+    <title>Mike Lewis WDD 230 Portal</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-    <header>
-        <div id="photo"></div>
-        <div id="name">
-            <h1>Mike Lewis</h1>
-        </div>
-    </header>
-    <main>
-        <h2>WDD 230: Assignment Portal</h2>
-        <ul>
-            <li>Week 01: <a href="https://codepen.io/Wyoming-C64/pen/VwBmKJE" class="lesson-link" title="Opens in a new tab or window at CodePen" target="_BLANK">Date Formatting (External: CodePen)</a></li>
-            <li>Lesson 02: <a href="lesson02.html" class="lesson-link">Title</a></li>
-            <li>Lesson 03: <a href="lesson03.html" class="lesson-link">Title</a></li>
-            <li>Lesson 04: <a href="lesson04.html" class="lesson-link">Title</a></li>
-            <li>Lesson 05: <a href="lesson05.html" class="lesson-link">Title</a></li>
-            <li>Lesson 06: <a href="lesson06.html" class="lesson-link">Title</a></li>
-            <li>Lesson 07: <a href="lesson07.html" class="lesson-link">Title</a></li>
-            <li>Lesson 08: <a href="lesson08.html" class="lesson-link">Title</a></li>
-            <li>Lesson 09: <a href="lesson09.html" class="lesson-link">Title</a></li>
-            <li>Lesson 10: <a href="lesson10.html" class="lesson-link">Title</a></li>
-            <li>Lesson 11: <a href="lesson11.html" class="lesson-link">Title</a></li>
-        </ul>
-    </main>
-    <footer>
-        <div id="copyright">&copy; <span id="thisYear">1900</span> &#128638; Michael E. Lewis &#128639; Cheyenne, Wyoming</div>
-        <div id="modification">Last Updated: <span id="timestamp"></span></div>
-    </footer>
-    <script src="./script/script.js"></script>
+    <div class="content">
+        <header>
+            <div>
+                <img class="profile-pic" src="images/mike-pic.jpg" alt="Picture of Mike Lewis in Cheyenne, WY">
+            </div>
+            <div>
+                <h1 id="name">Mike Lewis</h1>
+            </div>
+        </header>
+        <main>
+            <h2>WDD 230: Assignment Portal</h2>
+            <ul>
+                <li>Week 01: <a href="https://codepen.io/Wyoming-C64/pen/VwBmKJE" title="Opens in a new tab or window at CodePen" target="_BLANK">Date Formatting (External: CodePen)</a></li>
+                <li>Lesson 02: <a href="#lesson02.html">Title</a></li>
+                <li>Lesson 03: <a href="#lesson03.html">Title</a></li>
+                <li>Lesson 04: <a href="#lesson04.html">Title</a></li>
+                <li>Lesson 05: <a href="#lesson05.html">Title</a></li>
+                <li>Lesson 06: <a href="#lesson06.html">Title</a></li>
+                <li>Lesson 07: <a href="#lesson07.html">Title</a></li>
+                <li>Lesson 08: <a href="#lesson08.html">Title</a></li>
+                <li>Lesson 09: <a href="#lesson09.html">Title</a></li>
+                <li>Lesson 10: <a href="#lesson10.html">Title</a></li>
+                <li>Lesson 11: <a href="#lesson11.html">Title</a></li>
+            </ul>
+        </main>
+        <footer>
+            <div class="copyright">&copy; <span id="yearField">1982</span> &nbsp;.:&#10998;:.&nbsp; Michael E. Lewis &nbsp;.:&#10998;:.&nbsp; Cheyenne, Wyoming</div>
+            <div class="modification">Last Updated: <span id="timestamp"></span></div>
+        </footer>
+       
+    </div>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
