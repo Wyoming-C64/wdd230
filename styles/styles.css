@@ -138,6 +138,7 @@ a:visited {
 }
 
 .modification {
+    margin-top: 0.5em;
     color: var(--c64-grey3);
 }
 
