@@ -126,7 +126,7 @@ footer {
 }
 
 a {
-    color: var(--c64-ltblue);
+    color: var(--c64-blue);
 }
 
 a:active {
@@ -134,7 +134,7 @@ a:active {
 }
 
 a:visited {
-    color: var(--c64-purple);
+    color: var(--c64-blue);
 }
 
 .modification {
