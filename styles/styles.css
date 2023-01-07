@@ -1,4 +1,4 @@
-/* Futura fonts made from oNline Web Fonts are licensed by CC BY 3.0 */
+/* Futura fonts made from oNline Web Fonts are licensed CC BY 3.0 
 @font-face {
     font-family: "Futura";
     src: url("../fonts/Futura_Book.woff2") format("woff2");
@@ -51,9 +51,9 @@
     --header-foreground: var(--c64-white);
 
     /* change the values below to your chosen font(s) */
-    --heading-font: "Futura", Helvetica, Arial, sans-serif;
-    --paragraph-font: "Futura", Helvetica, Arial, sans-serif;
-    --semibold-font: "Futura Medium", Helvetica, Arial, sans-serif;
+    --heading-font: "Urbanist", Helvetica, Arial, sans-serif;
+    --semibold-font: "Urbanist", Helvetica, Arial, sans-serif;
+    --paragraph-font: "Urbanist", Helvetica, Arial, sans-serif;
     --code-font: "C64-Pro-Mono", "Source Code Pro", Courier, monospace;
   
     /* these colors below should be chosen from among your palette colors above */
@@ -71,12 +71,16 @@
 
 * {
     font-family: var(--paragraph-font);
+    font-weight: 500;
+    font-kerning: normal;
 }
 
 
 body {
     line-height: 1.3em;
     color: var(--paragraph-color-on-white);
+    letter-spacing: 0.04em;
+    font-kerning: normal;
 }
 
 
@@ -105,10 +109,11 @@ header {
     color: var(--header-foreground);
     text-transform: uppercase;
     text-align: center;
-    padding: 30px;
+    padding-right: 15px;
     font-size: 2em;
     text-shadow: 0 0 30px black;
     font-family: var(--code-font);
+    letter-spacing: 0;
 }
 
 footer {
@@ -118,10 +123,13 @@ footer {
     color: var(--headline-color-on-color);
 }
 
+.header-pic {
+    text-align: center;
+}
 
 .profile-pic {
     width: 250px;
-    margin: 1em 0 1em 1em;
+    margin: 1em auto;
     box-shadow: 2px 2px 10px 2px black;
 }
 
@@ -146,22 +154,39 @@ main {
     padding: 0 20px;
 }
 
+
+b {
+    font-family: var(--semibold-font);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
     color: var(--headline-color-on-white);
     text-shadow: 0 0 10px grey;
     margin: 1em 0 0.5em 0;
 }
 
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    font-weight: 900;
+}
+
+h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+
 ul {
     display: block;
-    width: 860px;
+    width: 880px;
     padding: 10px 0;
     margin: 0;
     margin-bottom: 2em;
     border-top: 2px solid var(--c64-grey1);
     border-bottom: 2px solid var(--c64-grey1);
-    padding: 1em;
+    padding: 20px;
 }
 
 ul li {
