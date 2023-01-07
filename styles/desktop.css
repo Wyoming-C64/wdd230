@@ -1,0 +1,70 @@
+@media screen and (min-width: 1024px) { 
+
+    body {
+        line-height: 1.3em;
+        letter-spacing: 0.04em;
+    }
+    
+
+    .content {
+        margin: 50px auto;
+        width: 960px;
+    }
+    
+    header, footer {
+        border: 20px solid var(--header-border);
+        border-radius: 20px;
+        box-shadow: 0 0 30px black;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;  
+    }
+
+    .profile-pic {
+        margin: 1em auto;
+    }
+
+    #name {
+        padding-right: 15px;
+        font-size: 2em;
+        text-shadow: 0 0 30px black;
+    }
+    
+    footer {
+        text-align: center;
+        margin: 1em 0;
+        padding: 20px;
+        font-size: 1em;
+        color: var(--headline-color-on-color);
+    }
+
+    .byline, .modification {
+        flex-direction: row;
+        margin: 0 5em;
+    }
+
+    .byline {
+        margin-bottom: .5em;
+    }
+
+    .footer-separator {
+        display: contents;
+    }
+
+    main {
+        padding: 0 0px;
+    }
+
+    ul {
+        width: 880px;
+        margin: 0 40px 2em 0px;
+        border-top: 2px solid var(--c64-grey1);
+        border-bottom: 2px solid var(--c64-grey1);
+        padding: 20px;
+    }
+
+
+}
