@@ -4,18 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike Lewis">
+    <meta name="description" content="Three different design principles exemplified by three different websites I found, all on a responsive web page.">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Urbanist:ital,wght@0,500;0,600;0,800;0,900;1,500;1,600;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
     <title>Mike Lewis: WDD 230 Design Principles</title>
 </head>
 
 <body>
     <header>
-        <h1>Design Principles</h1>    
+        <h1>Design Principles Document</h1>    
         <h2>Mike Lewis</h2>
     </header>
     <main>
-        <h3>PARC: Alignment</h3>
-        <h3>PARC: Repitition</h3>
-        <h3>Visual Heirarchy</h3>
+        <div class="content">
+            <div class="page-grid">
+                <section class="topic-card topic1">
+                    <h3 class="topic-title">Alignment</h3>
+                    <div class="topic-content">
+                        <h4>Amazon</h4>
+                        <p class="company-link"><a href="https://amazon.com" target="_blank">amazon.com</a></p>
+                        <div class="example-website-image">
+                            <img src="images/amazon.jpg" alt="Placeholder Image">
+                        </div>
+                        <div class="body-text">
+                            <p>The Amazon website is a great example of a site that effectively uses <b>alignment</b> in its design.</p>
+                            <p>The elements of the header are neatly in rows. The menu icon aligns to the left edge of the search bar below while the shopping cart aligns to the right edge. The logo and sign-in icons all have vertical alignment with each other.</p>
+                            <p>The navigation bar below the search bar keeps all of the options aligned on a single line, even though they do not all fit. This is overcome by allowing the nav bar to scroll left or right on the screen.</p>
+                            <p>The items for sale are not haphazardly placed on the page. Specific products, even of different shapes and sizes, are placed in same-sized boxes and evenly aligned with each other. The remainder of the page tends to follow this grid-type layout with products taking up equal space, aligning both horizontally and vertically.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="topic-card topic2">
+                    <h3 class="topic-title">Whitespace</h3>
+                    <div class="topic-content">
+                        <h4>Adobe</h4>
+                        <p class="company-link"><a href="https://adobe.com" target="_blank">adobe.com</a></p>
+                        <div class="example-website-image">
+                            <img src="images/adobe.jpg" alt="Placeholder Image">
+                        </div>
+                        <div class="body-text">
+                            <p>Adobe does a great job of utilizing <b>whitespace</b> even on a small screen like my phone. At the top are only three small elements, the most dominant of which is the brand's logo. Instead of overwhelming the user with all of Adobe's products at once, a single feature (Adobe Express) is presented with a few sentences to describe it and call the user to action.</p>
+                            <p>Plenty of whitespace surrounds the elements to isolate them and give them varying degrees of importance. The "standout" headline literally <i>stands out</i> with its heavy text and accompanying whitespace around it.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="topic-card topic3">
+                    <h3 class="topic-title">Contrast</h3>
+                    <div class="topic-content">
+                        <h4>Ubiquiti, Inc.</h4>
+                        <p class="company-link"><a href="https://ui.com" target="_blank">ui.com</a></p>
+                        <div class="example-website-image">
+                            <img src="images/ui.jpg" alt="Placeholder Image">
+                        </div>
+                        <div class="body-text">
+                            <p>The Ubiquiti, Inc. home page of their website does a great job of utilizing <b>contrast</b> to capture the reader's attention. A single white headline on black background (with plenty of "whitespace") appears in stark contrast to the normally black-on-white featured on the rest of the page.</p>
+                            <p>The featured image at the top of the page is an animation that automatically plays (the "inspector window" moves to examine different parts of the network switch) contrasting with the otherwise static elements below.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
+    <footer>
+        <div class="byline">
+            <span class="byline-element">&copy; <span id="yearField">1982</span></span>
+            <span class="footer-separator">&nbsp;|&nbsp;</span>
+            <span class="byline-element">Michael E. Lewis</span>
+            <span class="footer-separator">&nbsp;|&nbsp;</span>
+            <span class="byline-element">Last Updated: <span id="timestamp"></span></span>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

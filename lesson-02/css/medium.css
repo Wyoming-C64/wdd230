@@ -1,0 +1,19 @@
+@media screen and (min-width: 700px) and (max-width: 1023px) { 
+
+    .page-grid {
+        display: grid;
+        grid-template-areas: "topic1 topic2"
+                             "topic3 topic3";
+        grid-gap: 1em;
+        align-items: stretch;
+    }
+
+    .topic-content {
+        padding: 0.2em 1em;
+    }
+
+    .topic1, .topic2 {
+        width: 45vw;
+    }
+    
+}
