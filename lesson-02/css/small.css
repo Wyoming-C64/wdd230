@@ -4,6 +4,8 @@
     --accent-1: #000000;
     --accent-2: #e5e5e5;
     --background-color: #ffffff;
+    --link-color: #282c62;
+    --link-hover: #5c72c9;
 }
 
 body {
@@ -26,6 +28,14 @@ h3, h4 {
 
 h4 {
     margin-top: 0.75em;
+}
+
+a, a:visited {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover);
 }
 
 header {
