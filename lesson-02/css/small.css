@@ -11,12 +11,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    
+    margin: 0;  
 }
 
 h1, h2 {
     margin: 0.5em 0;
+    
     font-weight: 400;
 }
 
@@ -29,16 +29,19 @@ h4 {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--accent-2);
-    text-align: center;
     padding: 0.55em;
     margin-bottom: 0.5em;
+
+    background-color: var(--primary-color);
+    color: var(--accent-2);
+    
+    text-align: center;
 }
 
 main {
     margin: 0 auto;
     padding: 20px;
+
     background-color: var(--background-color);
 }
 
@@ -48,14 +51,15 @@ main {
                          "topic2"
                          "topic3";
     grid-gap: 2em;
-
 }
 
 section.topic-card {
     display: block;
     height: 100%;
+
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    
     background-color: var(--accent-2);
 }
 
@@ -75,23 +79,30 @@ section.topic-card {
 
 .topic-title {
     display: block;
+    
     background-color: var(--secondary-color);
     color: var(--accent-1);
+    
     font-size: 1.2em;
+    
     border-top: 2px solid #d98c0f;
     border-left: 2px solid #d98c0f;
     border-right: 2px solid #d98c0f;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    
     padding: 0.5em 0.5rem;
+    
     margin: 0;
 }
 
 .topic-content {
     display: block;
-    padding: 0.1em 0.75em;
+    
     font-size: 0.9em;
     line-height: 1.5em;
+
+    padding: 0.1em 0.75em;
 }
 
 .body-text {
@@ -100,33 +111,38 @@ section.topic-card {
 }
 
 .company-link {
-    margin: 0.25em 0 1.25em 0;
     font-weight: 600;
     
+    margin: 0.25em 0 1.25em 0;
 }
 
 .example-website-image {
     display: block;
+    width: 100%;
+
     background: var(--accent-2);
+    
     text-align: center;
-    width: 100%
 }
 
 .example-website-image img {
     width: 100%;
-    border: 1px solid black;
-    box-shadow: 0 5px 10px #888;
     max-width: 900px;
+
+    border: 1px solid black;
+    box-shadow: 0 5px 10px #888;   
 }
 
 footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: var(--accent-2);
-    padding: 0.75em;
     font-size: 0.75em;
     font-weight: 600;
     line-height: 1.5em;
+    text-align: center;
+
+    background-color: var(--primary-color);
+    color: var(--accent-2);
+    
+    padding: 0.75em;
 }
 
 #timestamp {
