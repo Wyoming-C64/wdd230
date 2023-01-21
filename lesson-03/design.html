@@ -5,28 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mike Lewis">
-    <meta name="description" content="Design plans for a particular Chamber of Commerce website.">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <title>Chamber of Commerce Site Plan: Design</title>
+    <meta name="description" content="A site plan for a particular Chamber of Commerce website.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Balthazar&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Sundance Chamber of Commerce Site Plan: Design</title>
 </head>
 <body>
     <header>
-        <h1>Chamber of Commerce Site Plan</h1>
+        <h1>Sundance Chamber of Commerce Site Plan</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Overview</a></li>
                 <li><a href="target-audience.html">Target Audience</a></li>
                 <li><a href="design.html">Design</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Colors</h2>
-        <h2>Typography</h2>
-        <h2>Other Design Notes</h2>
+        <h2>Design</h2>
+        <h3>Colors</h3>
+        <p>The colors to be used on the web site are as follows:</p>
+        <div class="color-grid">
+            <div class="color-head"><h4>Name</h4></div><div class="color-head"><h4>RGB Value</h4></div><div class="color-head"><h4>Sample</h4></div>
+            <div class="color-title">Primary Color</div><div class="color-spec">#6b2500<br/>rgb(107,37,0)</div><div class="color-sample" id="accent-color"></div>
+            <div class="color-title">Secondary Color</div><div class="color-spec">#ffd88a<br/>rgb(255,216,138)</div><div class="color-sample" id="secondary-color"></div>
+            <div class="color-title">Accent Color</div><div class="color-spec">#a70d1a<br/>rgb(167,13,26)</div><div class="color-sample" id="primary-color"></div>
+            <div class="color-title">Text Color</div><div class="color-spec">#463c37<br/>rgb(70,60,55)</div><div class="color-sample" id="text-color"></div>
+            <div class="color-title">Background</div><div class="color-spec">#fffcf5<br/>rgb(255,252,245)</div><div class="color-sample" id="background-color"></div>
+        </div>
+        <p>The colors identified above will be used as follows:</p>
+        <h4>Primary Color</h4>
+        <p>Will be used for major heading text colors, as well as the background color for the header and footer.</p>
+        <h4>Secondary Color</h4>
+        <p>Will be used as an accent color, as well as a text color for text appearing on dark background colors (header, footer, etc.)</p>
+        <h4>Accent Color</h4>
+        <p>Primarily intended to be a hyperlink color on lighter-colored backgrounds, can also be used on smaller graphical elements like borders, horizontal rules, etc.</p>
+        <h4>Text Color</h4>
+        <p>his will be the primary text color when text appears on light-colored backgrounds. Will also be used for lesser headings like H4, H5, and H6.</p>
+        <h4>Background Color</h4>
+        <p>This is the primary background color for most of a page layout.</p>
+    
+        <h3>Typography</h3>
+        <p>All type will be set as follows:</p>
+        <div class="sample-box">
+            <h1>Heading 1: Balthazar</h1>
+            <p>To be used in header for site title.</p>
+            <h2>Heading 2: Alegreya SC 600</h2>
+            <p>To be used as individual page title in body of page.</p>
+            <h3>Heading 3: Alegreya SC 600</h3>
+            <h4>Heading 4: Alegreya SC 500</h4>
+            <h5>Heading 5: Alegreya SC 500</h5>
+            <h6>Heading 6: Alegreya SC 500</h6>
+            <p>Headings H3 through H6 will be used as subheadings, etc. for outlining the information on individual pages as needed, although it will be rare and unlikely that headings will get to a level past H4.</p>
+            <p>Body text is set in Balthazar 400 with a slightly larger line-spacing to make text easy to read. </p>
+            <h4>Sample Paragraph</h4>
+            <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr. Glass.</p>
+        </div>
+
+        <h3>Other Design Notes</h3>
+        <p>None at this time.</p>
     </main>
     <footer>
-
+        <div class="byline">
+            <span class="byline-element">&copy; <span id="yearField">1982</span> - Michael E. Lewis</span>
+            <span class="footer-separator">&nbsp;|&nbsp;</span>
+            <span class="byline-element">Last Updated: <span id="timestamp"></span></span>
+        </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
