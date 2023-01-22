@@ -1,0 +1,39 @@
+.persona-card {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    min-width: 370px;
+    max-width: 1100px;
+        
+    box-shadow: 5px 5px 9px #888;
+    margin-bottom: 2em;
+    background-color: var(--bkg-color);
+}
+
+.persona-title {
+    grid-column: 1/2;
+    padding: 0.5em;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.persona-title h4 {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.6em;
+    line-height: 1.0em;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 5px var(--text-color);
+}
+
+.persona-img, .persona-details {
+    font-size: 0.85em;
+    line-height: 1.4em;
+    justify-self: center;
+}
+
+.persona-details {
+    padding: 0 0.5em;
+}
