@@ -1,0 +1,361 @@
+:root {                               /* from Coolors.com */
+    --primary-color:    #6b2500;    /* Seal Brown */
+    --secondary-color:  #ffd88a;    /* Jasmine */
+    --accent-color:     #a70d1a;    /* Ruby Red */
+    --text-color:       #463c37;    /* Dark Lava */
+    --bkg-color:        #fffcf5;    /* Floral White */
+
+    /* From Google Fonts - Copperplate Best Matches */
+    --heading-font: 'Alegreya SC', serif;
+    --body-text-font: 'Balthazar', serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: var(--text-color);
+    font-family: var(--body-text-font);
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+header {
+    margin: 0;
+    padding: 5px 5px 20px 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    align-items: center;
+}
+
+header img.logo {
+    width: 70px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+
+.branding-text {
+    margin: 0 0;
+}
+
+header a, header a:visited, nav a, nav a:visited {
+    color: var(--secondary-color);
+}
+
+.identity {
+    display: flex; 
+    grid-column: 1/2;
+    min-width: 240px;
+    align-items: center;
+    align-content: center;
+    justify-items: start;
+    flex-direction: row;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    min-width: 62px;
+}
+
+.social-icon {
+    display: none;
+    width: 25px;
+    height: 25px;
+    margin: auto 2px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: cornflowerblue;
+    font-size: 0.7em;
+    line-height: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.menu-button {
+    justify-self: end;
+    font-size: 0.6em;
+}
+
+#hamburgerBtn span {
+    width: fit-content;
+}
+
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
+
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
+
+.date {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+
+h1 {
+    font-family: var(--body-text-font);
+    font-weight: 700;
+    font-size: 0.9em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+} 
+
+.m {
+    margin: 0 0 0.8em 0;
+    padding: 0;
+    font-size: 0.6em;
+    line-height: 0.8;
+}
+
+
+nav {
+    margin: 0 auto;
+    text-align: right;
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    border-top: 1px solid var(--secondary-color);
+}
+
+nav ul.open {
+    display: block;
+}
+
+nav ul li {
+    border-bottom: 1px solid var(--secondary-color);
+    margin-bottom: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1.0rem;    
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a.active, nav a.active:visited {
+    background-color: var(--accent-color);
+    color: var(--bkg-color);
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+
+
+main {
+    margin: 0.2em;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+h4, h5, h6 {
+    font-weight: 500;
+}
+
+p, ul, ol {
+    margin-top: 0.3em;
+}
+
+main li {
+    margin-bottom: 0.4em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    margin: 0;
+}
+
+
+
+
+
+
+
+main img {
+    /* All images within the "main" content area */
+    border: 1px solid var(--text-color);
+}
+
+footer {
+    display: block;
+    text-align: center;
+    margin: 2em auto 0 auto;
+    border-top: 1px solid var(--primary-color);
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+@media only screen and (min-width: 360px) {
+
+    .social-icon {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin: auto 2px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 8px;
+        background: cornflowerblue;
+        font-size: 0.7em;
+        line-height: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+    .social-menu {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: 3fr 1fr 25px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/****************************************
+
+PLACEHOLDER STYLES
+(To be erased... eventually...)
+*****************************************/
+
+
+
+.ph-img {
+    border: 1px solid black;
+    background-color: grey;
+}
+
+#hero {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: 300px
+}
+
+#news {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: 300px    
+}
+
+#spotlights {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: fit-content;    
+}
+
+.spotlight {
+    display: block;
+    margin: 1.0em 0.5em;
+    border: 2px dashed black;
+    border-radius: 25px;
+    padding: 8px;
+    height: 150px;
+}
+
+#join {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: 300px    
+}
+
+#event {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: 300px    
+}
+
+#weather {
+    display: block;
+    background-color: grey;
+    border: 1px solid #555;
+    margin: 0.2em 0;
+    width: 100%;
+    height: 300px    
+}

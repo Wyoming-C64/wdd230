@@ -1,0 +1,70 @@
+@media only screen and (min-width: 37.5em) {
+    nav ul { 
+        display: flex; 
+        align-items: flex-start;
+        border: 1px solid var(--primary-color);
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    nav ul li { 
+        flex: 1 1 auto;
+        border: 0px;
+    } 
+
+    h1 {
+        padding: 1em;
+        font-size: 2em;
+    }
+
+    .color-grid {
+        display: grid;
+        width: 720px;
+        height: 480px;
+        grid-template-columns: 1fr 2fr;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        background-color: white;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .color-head, .color-title, .color-spec, .color-sample {
+        box-sizing: border-box;
+        height: 96px;
+        text-align: center;
+        /* width: 240px; */
+        margin: 0;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
+    .color-head, .color-title {
+        padding: 20px;
+    }
+    
+    .color-head h4 {
+        margin: auto auto;
+        width: fit-content;
+        display: block;
+    }
+    
+    .color-spec {
+        font-family: 'Source Code Pro';
+        font-size: 0.7em;
+        line-height: 1.2em;
+        font-weight: 600;
+        padding: 15px 20px;
+    }
+    
+    .color-sample {
+        padding: 0;
+    }
+
+
+    .sample-box {
+        padding: 72px;
+    }
+
+}

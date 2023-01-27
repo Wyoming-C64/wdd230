@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike Lewis">
+    <meta name="description" content="The Sundance Chamber of Commerce website.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Balthazar&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+
+    <title>Sundance Chamber of Commerce</title>
+</head>
+<body>
+
+    <!-- *************************** HEADER ******************************** -->
+
+    <header>
+        <div class="identity">
+            <picture>
+                <img class="logo" src="images/sundance_logo.svg" alt="Fictional Sundance Wyoming logo.">
+            </picture>
+            <section class="branding-text">
+                <h1>Sundance</h1>
+                <div class="m">Chamber of Commerce</div>
+            </section>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank"><img class="social-icon" alt="f" src=""></a>
+            <a href="https://linkedin.com" target="_blank"><img class="social-icon" alt="in" src=""></a>
+        </div>
+        <div class="menu-button">
+            <button id="hamburgerBtn"><span>&#9776;</span><span>&#128940;</span></button>
+        </div>
+        <div class="date">
+            <span id="todayDate">Today is the day that it is.</span>
+        </div>
+    </header>
+
+    <nav>  
+        <ul id="primaryNav">
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>    
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="social-menu"><a href="https://facebook.com" target="_blank">Our Facebook</a></li>
+            <li class="social-menu"><a href="https://linkedin.com" target="_blank">Our LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <!-- *************************** MAIN ********************************** -->
+
+    <main>
+        <section id="hero">Hero Section</section>
+        <section id="news">News Section</section>
+        <section id="spotlights">Spotlights
+            <div class="spotlight">Spotlight 1</div>
+            <div class="spotlight">Spotlight 2</div>
+        </section>
+        <section id="join">Join Section</section>
+        <section id="event">Event Section</section>
+        <section id="weather">Weather Section</section>
+    </main>
+
+    <!-- *************************** FOOTER ******************************* -->
+
+    <footer>
+        <div class="byline">
+            <span class="byline-element">&copy; <span id="yearField">1982</span> - Michael E. Lewis</span>
+            <br>
+            <span class="byline-element">Last&nbsp;Updated: <span id="timestamp"></span></span>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
