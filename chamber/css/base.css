@@ -1,5 +1,5 @@
 :root {                               /* from Coolors.com */
-    --primary-color:    #6b2500;    /* Seal Brown */
+    --primary-color:    #561e00;    /* Seal Brown */
     --secondary-color:  #ffd88a;    /* Jasmine */
     --accent-color:     #a70d1a;    /* Ruby Red */
     --text-color:       #463c37;    /* Dark Lava */
@@ -25,6 +25,19 @@ body {
     line-height: 1.8rem;
 }
 
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 header {
     margin: 0;
     padding: 5px 5px 20px 5px;
@@ -35,24 +48,8 @@ header {
     align-items: center;
 }
 
-header img.logo {
-    width: 70px;
-    margin-right: 5px;
-    padding: 5px;
-}
-
-
-.branding-text {
-    margin: 0 0;
-}
-
-header a, header a:visited, nav a, nav a:visited {
-    color: var(--secondary-color);
-}
-
 .identity {
     display: flex; 
-    grid-column: 1/2;
     min-width: 240px;
     align-items: center;
     align-content: center;
@@ -60,32 +57,72 @@ header a, header a:visited, nav a, nav a:visited {
     flex-direction: row;
 }
 
+.header-logo {
+    width: 70px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.branding-text {
+    margin: 0 0;
+}
+
+.branding-text h1 {
+    font-family: var(--body-text-font);
+    font-weight: 700;
+    font-size: 0.9em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+} 
+
+.subhead {
+    margin: 0 0 0.8em 0;
+    padding: 0;
+    font-size: 0.6em;
+    line-height: 0.9;
+}
+
+header a, header a:visited {
+    color: var(--secondary-color);
+}
+
+nav a, nav a:visited {
+    color: var(--accent-color);
+}
+
 .social {
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-self: right;
+    margin-right: 0.30em;
     min-width: 62px;
 }
 
 .social-icon {
     display: none;
-    width: 25px;
-    height: 25px;
-    margin: auto 2px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     border: 1px solid black;
     border-radius: 8px;
     background: cornflowerblue;
-    font-size: 0.7em;
+    font-size: 0.9em;
     line-height: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
 }
 
+button {
+    border-radius: 8px;
+}
+
 .menu-button {
     justify-self: end;
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 #hamburgerBtn span {
@@ -114,29 +151,10 @@ header a, header a:visited, nav a, nav a:visited {
 }
 
 
-h1 {
-    font-family: var(--body-text-font);
-    font-weight: 700;
-    font-size: 0.9em;
-    line-height: 0.9;
-    text-transform: uppercase;
-    color: var(--secondary-color);
-    padding: 0;
-    margin: 0;
-} 
-
-.m {
-    margin: 0 0 0.8em 0;
-    padding: 0;
-    font-size: 0.6em;
-    line-height: 0.8;
-}
-
-
 nav {
     margin: 0 auto;
     text-align: right;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 nav ul {
@@ -144,7 +162,7 @@ nav ul {
     list-style-type: none;
     overflow: hidden;
     padding: 0;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 nav ul.open {
@@ -152,7 +170,7 @@ nav ul.open {
 }
 
 nav ul li {
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
     margin-bottom: 0;
 }
 
@@ -164,6 +182,7 @@ nav ul li a {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--accent-color);
 }
 
 nav a.active, nav a.active:visited {
@@ -172,11 +191,10 @@ nav a.active, nav a.active:visited {
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: var(--bkg-color);
+    text-decoration: none;
 }
-
-
 
 
 main {
@@ -207,28 +225,22 @@ main li {
     margin-bottom: 0.4em;
 }
 
-a {
-    text-decoration: none;
-    color: var(--accent-color);
-}
-
-a:visited {
-    color: var(--accent-color);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 nav ul {
     margin: 0;
 }
 
-
-
-
-
-
+main {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "Hero" 
+        "News"
+        "Weat"
+        "Evnt"
+        "Spot"
+        ;
+}
 
 main img {
     /* All images within the "main" content area */
@@ -236,9 +248,19 @@ main img {
 }
 
 footer {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "Logo"
+        "Addr"
+        "Contact"
+        "Owner"
+        "Mod";
+    justify-items: center;
     text-align: center;
-    margin: 2em auto 0 auto;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    margin: 0.5em auto 0 auto;
     border-top: 1px solid var(--primary-color);
     padding: 1em;
     background-color: var(--primary-color);
@@ -246,82 +268,77 @@ footer {
 }
 
 
-@media only screen and (min-width: 360px) {
+.footer-logo {
+    height: 6em;
+}
 
-    .social-icon {
-        display: block;
-        width: 25px;
-        height: 25px;
-        margin: auto 2px;
-        text-align: center;
-        border: 1px solid black;
-        border-radius: 8px;
-        background: cornflowerblue;
-        font-size: 0.7em;
-        line-height: 1.2em;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        color: white;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 
-    .social-menu {
-        display: none;
-    }
+footer a, footer a:visited {
+    color: var(--bkg-color);
+    text-decoration: none;
+}
 
-    header {
-        grid-template-columns: 3fr 1fr 25px;
-    }
+.footer-separator {
+    display: none;
+}
+
+.footer-separator, .footer-element {
+    font-size: 0.9em;
+}
+
+#foot-logo {
+    grid-area: Logo;
+    
+}   
+
+#address {
+    grid-area: Addr;
+}
+
+#contact-info {
+    grid-area: Contact;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+
+#ownership {
+    grid-area: Owner;
+    align-self: baseline;
+}
+
+
+#modification {
+    grid-area: Mod;
+    align-self: baseline;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.75em;
+
+}
+
+
+
+
+/********************************
+        CONTENT ELEMENTS
+********************************/
+
+
+#hero {
+    grid-area: Hero;
     
 }
 
-
-
-
-
-
-
-
-
-
-
-/****************************************
-
-PLACEHOLDER STYLES
-(To be erased... eventually...)
-*****************************************/
-
-
-
-.ph-img {
-    border: 1px solid black;
-    background-color: grey;
-}
-
-#hero {
-    display: block;
-    background-color: grey;
-    border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: 300px
-}
-
 #news {
-    display: block;
-    background-color: grey;
-    border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: 300px    
+    grid-area: News;
 }
 
 #spotlights {
-    display: block;
-    background-color: grey;
-    border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: fit-content;    
+    grid-area: Spot;
 }
 
 .spotlight {
@@ -334,28 +351,43 @@ PLACEHOLDER STYLES
 }
 
 #join {
-    display: block;
-    background-color: grey;
-    border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: 300px    
+    grid-area: Join;
+    display: none;
 }
 
 #event {
-    display: block;
-    background-color: grey;
-    border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: 300px    
+    grid-area: Evnt;
 }
 
 #weather {
-    display: block;
+    grid-area: Weat;
+}
+
+#hero, #news, #spotlights, #join, #event, #weather {
     background-color: grey;
     border: 1px solid #555;
-    margin: 0.2em 0;
-    width: 100%;
-    height: 300px    
+    /* margin: 0.75em 0; */
+    padding: 0.3em;
+    min-height: 300px
+}
+
+
+
+/* Super small screens accounted for. 
+Now make minor adjustments for larger cell-phone screens like Galaxy 10+ and above, etc.*/
+@media only screen and (min-width: 360px) {
+
+    .social-icon {
+        display: block;
+        margin: auto 0.15em;
+    }
+
+    .social-menu {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: 3fr 1fr 25px;
+    }
+    
 }
