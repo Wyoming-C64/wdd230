@@ -21,8 +21,9 @@ addButton.addEventListener('click', function () {
 
         listDelete.addEventListener('click', () => {
             favList.removeChild(listItem);
+            numItems.textContent = favList.childElementCount;
         });
-        
+
         numItems.textContent = favList.childElementCount;
         userInput.value = '';
         userInput.focus();
