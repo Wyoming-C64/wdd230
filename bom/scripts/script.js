@@ -1,6 +1,9 @@
 const userInput = document.getElementById("favchap");
 const addButton = document.getElementById("addButton");
 const favList = document.getElementById("list")
+const numItems = document.getElementById("listItemCounter");
+
+numItems.textContent = favList.childElementCount;
 
 addButton.addEventListener('click', function () {
     if (userInput.value != "") {
@@ -19,7 +22,8 @@ addButton.addEventListener('click', function () {
         listDelete.addEventListener('click', () => {
             favList.removeChild(listItem);
         });
-
+        
+        numItems.textContent = favList.childElementCount;
         userInput.value = '';
         userInput.focus();
     } 
