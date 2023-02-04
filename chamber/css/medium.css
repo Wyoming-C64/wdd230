@@ -1,7 +1,7 @@
 @media only screen and (min-width: 800px) {
     
     header {
-        padding: 10px 15px 30px 15px;
+        padding: 5px 15px 20px 15px;
         grid-template-columns: 3fr 1fr 50px;
     }
 
@@ -21,19 +21,21 @@
 
     .social {
         justify-self: right;
+        align-self: flex-start;
+        margin-top: 0.5em;
     }
 
     .social-icon {
         width: 40px;
         height: 40px;
-        border-radius: 10px;
-        font-size: 1.2em;
-        margin: auto 0.2em;
+        margin: auto 0.1em;
     }
 
     .menu-button {
-        font-size: 1.1em;
+        font-size: 0.9em;
         line-height: 1.0em;
+        align-self: flex-start;
+        margin-top: 0.5em;
     }
 
     button {

@@ -37,12 +37,19 @@
     }
     .social {
         grid-area: social;
-        align-self: flex-end;
+        align-self: flex-start;
+        margin-top: 1em;
         justify-self: right;
     }
 
     .social-icon {
         margin: auto 0.25em; 
+        height: 36px;
+        width: 36px;
+    }
+
+    .social-icon img {
+        width: 36px;
     }
     
     
@@ -58,6 +65,18 @@
     .spotlight {
         min-height: 250px;
     }
+
+    .hero-img {
+        max-height: 640px;
+    }
+
+    .hero-img img {
+        width: auto;
+        position: relative;
+        left: -150px;
+
+    }
+
 
     footer {
         grid-template-columns: 1fr 6em 2fr 1fr 1fr;

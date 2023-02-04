@@ -105,15 +105,12 @@ nav a, nav a:visited {
     display: none;
     width: 30px;
     height: 30px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 8px;
-    background: cornflowerblue;
-    font-size: 0.9em;
-    line-height: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    background: transparent;
     color: white;
+}
+
+.social-icon img {
+    width: 30px;
 }
 
 button {
@@ -334,9 +331,14 @@ footer a, footer a:visited {
     
 }
 
+.hero-img {
+    overflow: clip;
+}
+
 .hero-img img {
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: -0.4em;
 }
 
 .join-button {
@@ -385,10 +387,19 @@ footer a, footer a:visited {
 
 #hero, #news, #spotlights, #join, #event, #weather {
     box-sizing: border-box;
-    background-color: grey;
-    border: 1px solid #555;
+    background-color: #aaa;
+    border: 1px solid black;
     /* margin: 0.75em 0; */
     min-height: 300px
+}
+
+.placeholder {
+    display: inline-block;
+    background-color: #111;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 
