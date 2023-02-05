@@ -378,7 +378,7 @@ footer a, footer a:visited {
     color: var(--secondary-color);   
 }
 
-.join-button a, .join-button a:hover {
+.join-button a, .join-button a:hover, .join-button a:visited  {
     color: var(--secondary-color);
 }
 
