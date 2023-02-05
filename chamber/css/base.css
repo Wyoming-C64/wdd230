@@ -369,7 +369,7 @@ footer a, footer a:visited {
 
 .join-button {
     display: inline-block;
-    margin-top: 0.5em;
+    margin: 0.5em 0;
     padding: 5px 10px;
     border-radius: 1.2em;
     border: 1px solid #111;
@@ -455,7 +455,7 @@ footer a, footer a:visited {
     text-align: center;
 }
 
-.justify {
+.left {
     text-align: left;
 }
 
