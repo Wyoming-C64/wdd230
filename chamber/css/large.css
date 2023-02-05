@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
 
     header {
         grid-template-columns: 1fr 2fr 6em;
@@ -72,10 +72,23 @@
 
     .hero-img img {
         width: auto;
+        max-width: 1024px;
         position: relative;
         left: -150px;
-
     }
+
+    .join-section {
+        left: 2.5vw;
+        top: 2.5vw;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    .join-button {
+        padding: 10px 20px;
+        
+    }
+
 
 
     footer {
@@ -107,12 +120,12 @@
     }
 
     .subhead {
-        font-size: 2.5em;
+        font-size: 1.7em;
         margin: 0 0 0 0.3em;
     }
 
     .branding-text h1 {
-        font-size: 2.5em;
+        font-size: 1.7em;
     }
     
 }
