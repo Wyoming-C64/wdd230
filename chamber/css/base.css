@@ -15,6 +15,15 @@ html {
     padding: 0;
 }
 
+#alertBar {
+    text-align: center;
+    padding: 0.5em;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 0 0 6px black;
+}
+
 body {
     margin: 0;
     padding: 0;

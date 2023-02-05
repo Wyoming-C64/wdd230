@@ -10,6 +10,13 @@ function toggleMenu() {
 
 // Select the HTML element to manipulate
 const d = new Date();
+const dow = d.getDay();
+const alertBar = document.getElementById("alertBar");
+
+if (dow >=1 && dow <= 2) {
+    alertBar.style.display = "block";
+}
+
 const year = d.getFullYear();
 const options = {
     weekday: 'long',
