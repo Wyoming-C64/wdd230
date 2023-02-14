@@ -69,7 +69,7 @@
         
         <!-- *** HERO *** -->
 
-        <section id="hero">
+        <div id="hero">
             <picture class="hero-img">
                 <source media="(max-width: 380px)" srcset="images/wdd230-org_380.webp">
                 <source media="(max-width: 800px)" srcset="images/wdd230-org_800.webp">
@@ -77,15 +77,13 @@
                 <!-- <img src="images/devils-tower-hero.jpg" alt="Photo of Devil's Tower, Wyoming."> -->
             </picture>
             
-                
-            
             <div class="join-section">
                 <div>Reach<br>New<br>Heights!</div>
                 <div class="join-button">
-                    <a href="join.html">Join Now!</a>
+                    <a href="join.html">Join Now</a>
                 </div>
             </div>
-        </section>
+        </div>
         
         <!-- *** NEWS *** -->
 
@@ -124,12 +122,12 @@
 
         <!-- *** JOIN *** -->
 
-        <section id="join" class="section-box">
-            <button class="join-button">
+        <div id="join" class="section-box">
+            <div class="join-button">
                 <a href="#" title="Join the chamber of commerce!">Join the Chamber!</a>
-            </button>
+            </div>
             <p class="left">Become a member and help further our mission to stengthen the economic success of our local businesses and community.</p>
-        </section>
+        </div>
         
         <!-- *** EVENTS *** -->
 
@@ -145,11 +143,11 @@
 
         <section id="weather" class="section-box">
             <h2>Weather</h2>
-            <div><span id="weatherIcon">&#9925;</span><span id="temperature">38</span>&deg;F</div>
-            <p id="skyCondition">Partly Cloudy</p>
+            <img src="https://openweathermap.org/img/w/04n.png" alt="Partly cloudy" id="weatherIcon">
+            <p><span id="weatherCondition">Partly Cloudy</span> <span id="currentTemp">42</span>&deg;F</p>
             <div class="weather-table">
-                <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td"><span id="windSpeed">12</span> mph</div>
-                <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td"><span id="windChill">None</span></div>
+                <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td"><span id="windSpeed">8.0</span>&nbsp;mph</div>
+                <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td"><span id="windChill"></span>&deg;F</div>
             </div>
         </section>
     </main>

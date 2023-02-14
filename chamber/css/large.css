@@ -71,11 +71,13 @@
     }
 
     .hero-img img {
+        /* To be restored after Week 06 Assignment */
         /* width: auto; */
         /* max-width: 1024px; */
+        /* left: -150px; */
         width: 100%;
         position: relative;
-        /* left: -150px; */
+        
     }
 
     .join-section {
@@ -87,9 +89,7 @@
 
     .join-button {
         padding: 10px 20px;
-        
     }
-
 
 
     footer {
