@@ -348,6 +348,7 @@ footer a, footer a:visited {
 }
 
 .hero-img {
+    display: block;
     overflow: clip;
 }
 
@@ -359,12 +360,19 @@ footer a, footer a:visited {
 
 .join-section {
     position: absolute;
-    left: 3.5vw;
-    top: 3.5vw;
+    left: 10px;
+    top: 10px;
     font-size: 0.8em;
     line-height: 1.2em;
     font-weight: bold;
     text-align: center;
+
+    /* To be removed after Week 06 Assignment */
+    
+    /* bottom: 60px; */
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 215, 156,0.7);
 }
 
 .join-button {
@@ -474,8 +482,10 @@ footer a, footer a:visited {
 
 
 
-/* Super small screens accounted for. 
-Now make minor adjustments for larger cell-phone screens like Galaxy 10+ and above, etc.*/
+/* All of the above accounts for super small mobile screens.
+I suspect that most mobile devices will apply the following rules, but
+this is just to be safe as the layout gets pretty crammed in smaller screens.
+*/
 @media only screen and (min-width: 380px) {
 
     .social-icon {

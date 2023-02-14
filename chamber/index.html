@@ -70,9 +70,15 @@
         <!-- *** HERO *** -->
 
         <section id="hero">
-            <div class="hero-img">
-                <img src="images/devils-tower-hero.jpg" alt="Photo of Devil's Tower, Wyoming.">
-            </div>
+            <picture class="hero-img">
+                <source media="(max-width: 380px)" srcset="images/wdd230-org_380.webp">
+                <source media="(max-width: 800px)" srcset="images/wdd230-org_800.webp">
+                <img src="images/wdd230-org_1300.webp" alt="Church">
+                <!-- <img src="images/devils-tower-hero.jpg" alt="Photo of Devil's Tower, Wyoming."> -->
+            </picture>
+            
+                
+            
             <div class="join-section">
                 <div>Reach<br>New<br>Heights!</div>
                 <div class="join-button">
@@ -139,11 +145,11 @@
 
         <section id="weather" class="section-box">
             <h2>Weather</h2>
-            <div><span id="weather-icon">&#9925;</span> 45&deg;F</div>
-            <p>Partly Cloudy</p>
+            <div><span id="weatherIcon">&#9925;</span><span id="temperature">38</span>&deg;F</div>
+            <p id="skyCondition">Partly Cloudy</p>
             <div class="weather-table">
-                <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td" id="windSpeed">2 mph</div>
-                <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td" id="windChill">None</div>
+                <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td"><span id="windSpeed">12</span> mph</div>
+                <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td"><span id="windChill">None</span></div>
             </div>
         </section>
     </main>
@@ -177,5 +183,6 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/windchill.js"></script>
 </body>
 </html>

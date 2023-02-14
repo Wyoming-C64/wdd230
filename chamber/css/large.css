@@ -71,15 +71,16 @@
     }
 
     .hero-img img {
-        width: auto;
-        max-width: 1024px;
+        /* width: auto; */
+        /* max-width: 1024px; */
+        width: 100%;
         position: relative;
-        left: -150px;
+        /* left: -150px; */
     }
 
     .join-section {
-        left: 2.5vw;
-        top: 2.5vw;
+        left: 20px;
+        top: 20px;
         font-size: 1.2em;
         line-height: 1.2em;
     }
