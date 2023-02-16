@@ -19,7 +19,7 @@ function calcWindChill(fahrTemp, speedMPH) {
             0.6215 * fahrTemp - 
             35.75 * speedMPH ** 0.16 + 
             0.4275 * fahrTemp * speedMPH ** 0.16);
-        result = windChill.toFixed(1);
+        result = windChill.toFixed(1) + "&deg;F";
     }
     
     return result;
@@ -28,7 +28,3 @@ function calcWindChill(fahrTemp, speedMPH) {
 
 
 windChill.innerHTML = calcWindChill(currentTempValue, windSpeedValue);
-
-
-
-
