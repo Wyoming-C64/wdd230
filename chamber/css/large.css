@@ -53,7 +53,7 @@
     }
     
     
-    main {
+    div#home {
         margin: 1em;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
@@ -71,10 +71,6 @@
     }
 
     .hero-img img {
-        /* To be restored after Week 06 Assignment */
-        /* width: auto; */
-        /* max-width: 1024px; */
-        /* left: -150px; */
         width: 100%;
         position: relative;
         

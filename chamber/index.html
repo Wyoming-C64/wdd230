@@ -23,7 +23,9 @@
     <header>
         <div class="identity">
             <picture>
-                <img class="header-logo" src="images/sundance_logo.webp" alt="Fictional Sundance Wyoming logo.">
+                <a href="index.html">
+                    <img class="header-logo" src="images/sundance_logo.svg" alt="Fictional Sundance Wyoming logo.">
+                </a>
             </picture>
             <section class="branding-text">
                 <h1>Sundance</h1>
@@ -52,7 +54,7 @@
 
     <nav>  
         <ul id="primaryNav">
-            <li><a href="#">Discover</a></li>
+            <li><a href="discover.html">Discover</a></li>
             <li><a href="#">Directory</a></li>
             <li><a href="#">Join</a></li>    
             <li><a href="#">Products</a></li>
@@ -66,97 +68,101 @@
     <!-- *************************** MAIN ********************************** -->
 
     <main>
-        
-        <!-- *** HERO *** -->
-
-        <div id="hero">
-            <picture class="hero-img">
-                <source media="(max-width: 380px)" srcset="images/wdd230-org_380.webp">
-                <source media="(max-width: 800px)" srcset="images/wdd230-org_800.webp">
-                <img src="images/wdd230-org_1300.webp" alt="Church">
-                <!-- <img src="images/devils-tower-hero.jpg" alt="Photo of Devil's Tower, Wyoming."> -->
-            </picture>
+        <div id="home"> <!-- Layout Grid -->
             
-            <div class="join-section">
-                <div>Reach<br>New<br>Heights!</div>
+            <!-- *** HERO *** -->
+
+            <div id="hero">
+                <picture class="hero-img">
+                    <source media="(max-width: 380px)" srcset="images/devil-tower-hero-380.webp">
+                    <source media="(max-width: 800px)" srcset="images/devil-tower-hero-800.webp">
+                    <img src="images/devil-tower-hero-1300.webp" alt="Church">
+                    <!-- <img src="images/devils-tower-hero.jpg" alt="Photo of Devil's Tower, Wyoming."> -->
+                </picture>
+                
+                <div class="join-section">
+                    <div>Reach<br>New<br>Heights!</div>
+                    <div class="join-button">
+                        <a href="join.html">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- *** NEWS *** -->
+
+            <section id="news" class="section-box">
+                <h2>News</h2>
+                <p class="left">Nice little clouds playing around in the sky. We don't want to set these clouds on fire. I'm a water fanatic. I love water. A little happy sunlight shining through there. Mountains are so simple, they're hard. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. Use what you see, don't plan it. Let's make some happy little clouds in our world.</p>
+                <p class="left">A tree cannot be straight if it has a crooked trunk. These things happen automatically. All you have to do is just let them happen. I get carried away with this brush cleaning. We don't need any guidelines or formats. All we need to do is just let it flow right out of us. If you overwork it you become a cloud killer. There's nothing worse than a cloud killer.</p>
+            </section>
+            
+            <!-- *** SPOTLIGHT(S) *** -->
+
+            <section id="spotlights" class="section-box">
+                <h2>Feature Members</h2>
+                <div class="spotlight">
+                    <img class="spot-logo" src="images/hades-real-estate.svg" alt="Hades Real Estate">
+                    <p>We've got hot properties!</p>
+                    <div class="spot-contact">
+                        109 Broadway Street<br>
+                        (307) 555-9876<br>
+                        <a href="#" target="_blank">www.hadesrealty.com</a>
+                    </div>
+                </div>
+                <div class="spotlight">
+                    <img class="spot-logo" src="images/zephyr-rest-logo.svg" alt="Zephyr Diner Restaurant">
+                    <p>Classic 1940s-1950s Dining!</p>
+                    <div class="spot-contact">
+                        507 Railroad Avenue<br>
+                        (307) 555-1234<br>
+                        <a href="#" target="_blank">www.zephyrdiner.com</a>
+                    </div>
+                </div>
+                <div>
+                    <a class="attributions" href="attributions.html" target="_blank">(Mock logo attributions here.)</a>
+                </div>
+            </section>
+
+            <!-- *** JOIN *** -->
+
+            <div id="join" class="section-box">
                 <div class="join-button">
-                    <a href="join.html">Join Now</a>
+                    <a href="#" title="Join the chamber of commerce!">Join the Chamber!</a>
                 </div>
+                <p class="left">Become a member and help further our mission to stengthen the economic success of our local businesses and community.</p>
             </div>
-        </div>
-        
-        <!-- *** NEWS *** -->
+            
+            <!-- *** EVENTS *** -->
 
-        <section id="news" class="section-box">
-            <h2>News</h2>
-            <p class="left">Nice little clouds playing around in the sky. We don't want to set these clouds on fire. I'm a water fanatic. I love water. A little happy sunlight shining through there. Mountains are so simple, they're hard. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. Use what you see, don't plan it. Let's make some happy little clouds in our world.</p>
-            <p class="left">A tree cannot be straight if it has a crooked trunk. These things happen automatically. All you have to do is just let them happen. I get carried away with this brush cleaning. We don't need any guidelines or formats. All we need to do is just let it flow right out of us. If you overwork it you become a cloud killer. There's nothing worse than a cloud killer.</p>
-        </section>
-        
-        <!-- *** SPOTLIGHT(S) *** -->
+            <section id="event" class="section-box">
+                <h2>Ribbon Cutting!</h2>
+                <span class="text-ccw">&#9986;&#65039;</span>
+                <h3>The Dusty Boot</h3>
+                <p class="center">Friday, Feb. 17, 2023<br>1:00 PM</p>
+                <p class="center"><a href="#">More info...</a></p>
+            </section>
+            
+            <!-- *** WEATHER *** -->
 
-        <section id="spotlights" class="section-box">
-            <h2>Feature Members</h2>
-            <div class="spotlight">
-                <img class="spot-logo" src="images/hades-real-estate.svg" alt="Hades Real Estate">
-                <p>We've got hot properties!</p>
-                <div class="spot-contact">
-                    109 Broadway Street<br>
-                    (307) 555-9876<br>
-                    <a href="#" target="_blank">www.hadesrealty.com</a>
+            <section id="weather" class="section-box">
+                <h2>Weather</h2>
+                <img src="https://openweathermap.org/img/w/04n.png" alt="" id="weatherIcon">
+                <p><span id="weatherCondition">Partly Cloudy</span> <span id="currentTemp">33</span>&deg;F</p>
+                <div class="weather-table">
+                    <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td"><span id="windSpeed">8.0</span>&nbsp;mph</div>
+                    <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td"><span id="windChill"></span></div>
                 </div>
-            </div>
-            <div class="spotlight">
-                <img class="spot-logo" src="images/zephyr-rest-logo.svg" alt="Zephyr Diner Restaurant">
-                <p>Classic 1940s-1950s Dining!</p>
-                <div class="spot-contact">
-                    507 Railroad Avenue<br>
-                    (307) 555-1234<br>
-                    <a href="#" target="_blank">www.zephyrdiner.com</a>
-                </div>
-            </div>
-            <div>
-                <a class="attributions" href="attributions.html" target="_blank">(Mock logo attributions here.)</a>
-            </div>
-        </section>
+            </section>
 
-        <!-- *** JOIN *** -->
 
-        <div id="join" class="section-box">
-            <div class="join-button">
-                <a href="#" title="Join the chamber of commerce!">Join the Chamber!</a>
-            </div>
-            <p class="left">Become a member and help further our mission to stengthen the economic success of our local businesses and community.</p>
-        </div>
-        
-        <!-- *** EVENTS *** -->
-
-        <section id="event" class="section-box">
-            <h2>Ribbon Cutting!</h2>
-            <span class="text-ccw">&#9986;&#65039;</span>
-            <h3>The Dusty Boot</h3>
-            <p class="center">Friday, Feb. 17, 2023<br>1:00 PM</p>
-            <p class="center"><a href="#">More info...</a></p>
-        </section>
-        
-        <!-- *** WEATHER *** -->
-
-        <section id="weather" class="section-box">
-            <h2>Weather</h2>
-            <img src="https://openweathermap.org/img/w/04n.png" alt="" id="weatherIcon">
-            <p><span id="weatherCondition">Partly Cloudy</span> <span id="currentTemp">33</span>&deg;F</p>
-            <div class="weather-table">
-                <div class="weather-th">Wind&nbsp;Speed:</div><div class="weather-td"><span id="windSpeed">8.0</span>&nbsp;mph</div>
-                <div class="weather-th">Wind&nbsp;Chill:</div><div class="weather-td"><span id="windChill"></span></div>
-            </div>
-        </section>
+        </div> <!--End Layout Grid-->
     </main>
 
     <!-- *************************** FOOTER ******************************* -->
 
     <footer>
         <picture id="foot-logo">
-            <img class="footer-logo" src="images/sundance_logo.webp" alt="Fictional Sundance Wyoming logo.">
+            <img class="footer-logo" src="images/sundance_logo.svg" alt="Fictional Sundance Wyoming logo.">
         </picture>
         <div id="address">
             <p class="footer-title">Sundance Chamber of Commerce<br>

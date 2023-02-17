@@ -46,7 +46,7 @@
         font-size: 1.1em;
     }
 
-    main {
+    div#home {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 

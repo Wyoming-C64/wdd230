@@ -247,7 +247,7 @@ nav ul {
 }
 
 
-main {
+div#home {
     display: grid;
     grid-gap: 0.5em;
     grid-template-columns: 1fr;
@@ -366,11 +366,6 @@ footer a, footer a:visited {
     line-height: 1.2em;
     font-weight: bold;
     text-align: center;
-
-    /* To be removed after Week 06 Assignment */
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgb(255, 215, 156,0.7);
 }
 
 .join-button {
