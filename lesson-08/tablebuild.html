@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike Lewis">
+    <meta name="description" content="Building and styling an HTML table that is used correctly.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>WDD 230 - Lesson 8 Activity</title>
+</head>
+<body>
+    <head>
+        <h1>Lesson 8 - HTML Table</h1>
+    </head>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4" scope="colgroup">ACME Wildwest Services</th>
+                </tr>
+                <tr>
+                    <td>&nbsp</th>
+                    <th scope="col">Basic</th>
+                    <th scope="col">Premium</th>
+                    <th scope="col">Deluxe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Feature 1</th>
+                    <td><span class="check">&#10004;</span></td>
+                    <td><span class="check">&#10004;</span></td>
+                    <td><span class="check">&#10004;</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Feature 2</th>
+                    <td><span class="cross">&#66338;</span></td>
+                    <td><span class="check">&#10004;</span></td>
+                    <td><span class="check">&#10004;</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Feature 3</th>
+                    <td><span class="cross">&#66338;</span></td>
+                    <td><span class="cross">&#66338;</span></td>
+                    <td><span class="check">&#10004;</span></td>
+                </tr>
+                <caption>Table 1: Account Feature Comparison</caption>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
