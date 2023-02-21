@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mike Lewis">
     <meta name="description" content="The Sundance Chamber of Commerce website.">
+        
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +53,7 @@
             <button id="hamburgerBtn"><span>&#9776;</span><span>&#128940;</span></button>
         </div>
         <div class="date">
-            <span id="todayDate">Today is the day that it is.</span>
+            <span id="todayDate">Today is the day that it is.</span><br>
         </div>
     </header>
 
@@ -67,7 +72,111 @@
     <!-- *************************** MAIN ******************************** -->
 
     <main>
-        <h2>Discover Sundance</h2>
+        <div id="discover"> <!-- Layout Grid -->
+            <div id="news" class="section-box">
+                <h2>Discover Sundance</h2>
+                <p class="left">Sundance is Wyoming's gateway to the Black Hills National Forest and gave Henry Longabaugh his famous nickname &ldquo;The Sundance Kid&rdquo;. A few of this nation's most famous landmarks are within 100 miles of our little town, including Devil's Tower, Mount Rushmore, and Crazy Horse Memorial.</p>
+                <p class="left">With just over one-thousand friendly residents and miles of open spaces, you'll never have to wait in line for anything. Summers are very enjoyable here with an average high that peaks at just over 80&deg;F. Festivals attract people from all over the nation all year round, and summer is a busy time with the thoroughfare full of tourists travelling to and from the Black Hills.</p>
+                <p></p>
+
+                <h3><a href="https://data.census.gov/table?q=Sundance,+Wyoming" target="_blank">2020</a> Census Summary</h3>
+                <p class="left">Population: 1,032</p>
+                <p class="left">Households: 566</p>
+                <p class="left">Median Income per Household: $57,727 per year</p>
+
+                <h3>Reasons to do Business Here*</h3>
+                
+                <p class="left">Sundance is a small town with access to world-famous landmarks and locations. Within a 70 mile radius of Sundance there is a market of over 200,000 people living and working in the Black Hills of South Dakota as well as the legendary Power River Basin coal mines near Gillette, Wyoming.</p>
+                
+                <p class="left"><strong>Transportation:</strong> Sundance is located on US Interstate 90, which connects the Pacific Northwest to the great city of Chicago. Regional airports in Gillette, WY and Rapid City, SD are within a 60 to 90 minute drive from Sundance. Regular flights are offered to major hubs like Denver, Salt Lake City, Chicago, and more.</p>
+    
+                <p class="left"><strong>Energy:</strong> Low cost and reliable electricity is provided by Powder River Energy with coal from our own Wyoming mines. The normal rate for power is $0.08 per kWh. </p>
+
+                <p class="left"><strong>Education:</strong> Our school system features small class sizes which means each child gets a high level of individual attention. This translates into high gradation rates (greater than 95%) achieved by the students. Nearby colleges include:
+                    <ul  class="left">
+                        <li><a href="https://www.bhsu.edu/" target="_blank">Black Hills State University</a></li>
+                        <li><a href="https://www.sdsmt.edu/" target="_blank">South Dakota School of Mines</a></li>
+                        <li><a href="https://gillettecollege.org/" target="_blank">Gillette College</a></li>
+                    </ul>
+
+                <p class="left"><strong>Low Taxes:</strong> The citizens of Wyoming pay one of the lowest levels of personal taxes in the United States. There is no income tax, and sales tax in Crook County is only 6%. Property taxes are also very low with a typical $250,000 home in Sundance paying only about $1700 per year.</p>
+
+                <p class="left"><strong>Outdoor Recreation:</strong> Sundance is located next to the Black Hills National Forest Bearlodge District. This resource is available for a variety of summer activities like camping, fishing, hiking and 4-wheeling, as well as many winter activities. Keyhole Reservoir (20 miles west) and Sand Creek (15 miles east) offer a variety of water recreation and sports. </p> 
+
+                <p class="caption">* Text content adapted from the real-life Sundance Chamber of Commerce web page  located at <a href="https://www.sundancewyoming.com/city-of-sundance/sundance-business" target="_blank">sundancewyoming.com</a>.<br>Accessed 17-Feb-2023.</p>
+                
+                <h3>Visit Us!</h3>
+
+                <p class="left">So what are you waiting for? We'd be happy to show you around town and discuss the many commercial opportunities that await you! Stop by our offices or give us a call:</p>
+                <p class="left">
+                    <blockquote class="left">
+                        Sundace Chamber of Commerce<br>
+                        120 N 4th St.<br> 
+                        Sundance, WY 82729<br>
+                        (307) 283-1000
+                    </blockquote>
+                </p>
+                <p class="left">Speaking of visits... <span id="daysSinceField"></span></p>
+            </div>
+
+            <div class="discover-pictures">
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/sundance-kid-etta-place.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        Henry "Sundance Kid" Longabaugh and<br>Etta Place.
+                    </p>
+                    <p class="caption right">
+                        Jan. 1901<br><a href="https://commons.wikimedia.org/wiki/File:Devil%27s_Tower_National_Monument_Blue_Sky.jpg" target="_blank">DeYoung Photography Studio</a><br>Public Domain
+                    </p>
+                </picture>
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/devils-tower_800.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        Take US-14 and WY-24 less than 30 mi. to see Devil's Tower, the first national monument.
+                    </p>
+                    <p class="caption right">
+                        <a href="https://commons.wikimedia.org/wiki/File:Devil%27s_Tower_National_Monument_Blue_Sky.jpg" target="_blank">Samzeroniner</a><br><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>
+                    </p>
+                </picture>
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/crazy-horse_800.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        Over 70 years in the making so far, the Crazy Horse Memorial is only 88 miles away.
+                    </p>
+                    <p class="caption right">
+                        <a href="https://commons.wikimedia.org/wiki/File:Crazy_Horse_and_a_clear_blue_sky.jpg" target="_blank">Mjmacarty</a><br><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>
+                    </p>
+                </picture>
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/mount-rushmore_800.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        Carved by Gutzon Borglum between 1927 and 1941, the Mt. Rushmore National Monument is a tribute to the nation and democracy. It's less than 100 miles from Sundance through the beautiful Black Hills.
+                    </p>
+                    <p class="caption right">
+                        <a href="https://commons.wikimedia.org/wiki/File:Mount_Rushmore_in_the_morning.jpg" target="_blank">Hardy08</a><br><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>
+                    </p>
+                </picture>
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/ski-joring_800.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        This is a fun sport called Ski Joring, and you can watch it during our Winter Festival!
+                    </p>
+                    <p class="caption right">
+                        <a href="https://commons.wikimedia.org/wiki/File:Leadville_Ski_Joring.jpg" target="_blank">Kaila Angello</a><br><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>
+                    </p>
+                </picture>
+                <picture>
+                    <img src="images/discover/preload.webp" data-src="images/discover/buffalo-bones_800.webp" alt="" loading="lazy">
+                    <p class="caption">
+                        The Vore Buffalo Jump is a natural sinkhole that became a convenient trap for ancient hunters. Now it's an incredible archeological site only minutes outside of Sundance.
+                    </p>
+                    <p class="caption right">
+                        <a href="https://commons.wikimedia.org/wiki/File:American_bison,_or_buffalo,_bones_at_the_Vore_Buffalo_Jump,_a_sinkhole_and_archeological_site_in_Crook_County,_Wyoming_LCCN2015634147.tif" target="_blank">Carol M. Highsmith</a><br>Public Domain
+                    </p>
+                </picture>
+            </div>
+        </div> <!-- End Layout Grid -->
+        
     </main>
 
 
@@ -100,6 +209,6 @@
 
 
     <script src="js/script.js"></script>
-    <script src="js/windchill.js"></script>
+    <script src="js/lazyload.js"></script>
 </body>
 </html>

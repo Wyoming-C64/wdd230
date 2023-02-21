@@ -83,6 +83,11 @@ body {
     font-kerning: normal;
 }
 
+code {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
 
 .content {
     display: block;

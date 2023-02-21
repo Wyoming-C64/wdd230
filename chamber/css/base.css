@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 :root {                               /* from Coolors.com */
     --primary-color:    #561e00;    /* Seal Brown */
     --secondary-color:  #ffd88a;    /* Jasmine */
@@ -8,6 +10,7 @@
     /* From Google Fonts - Copperplate Best Matches */
     --heading-font: 'Alegreya SC', serif;
     --body-text-font: 'Balthazar', serif;
+    --photo-caption: 'Special Elite', 'Times New Roman', serif;
 }
 
 html {
@@ -154,8 +157,21 @@ button {
 .date {
     grid-column: 1/4;
     justify-self: center;
+    text-align: center;
+    line-height: 0.8em;
 }
 
+#daysSinceField {
+    color: inherit;
+}
+
+blockquote {
+    font-size: 0.80em;
+    line-height: 1.1em;
+    background-color: rgba(128,0,0,0.05);
+    padding: 1em;
+    margin: 0 1em;
+}
 
 nav {
     margin: 0 auto;
@@ -224,7 +240,7 @@ h4, h5, h6 {
     font-weight: 500;
 }
 
-main p {
+main p, main ul, main li {
     font-size: 1.1rem;
     line-height: 1.2rem;
 }
@@ -258,6 +274,58 @@ div#home {
         "Evnt"
         "Spot"
         ;
+}
+
+div#discover {
+    display: grid;
+    margin: 1em 0.5em;
+    grid-gap: 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "News"
+        "PictureGrid";
+}
+
+
+.discover-pictures {
+    display: grid;
+    grid-area: PictureGrid;
+    grid-gap: 1.5em;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 1em;
+    margin: 1em 0;
+    max-width: 100%;
+}
+
+.discover-pictures picture {
+    border: 4vw solid white;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px grey;
+    max-width: 100%;
+    transition: box-shadow 0.5s;
+}
+
+.discover-pictures picture img {
+    width: 100%;
+    filter: blur(0em);
+}
+
+.discover-pictures picture img[data-src] {
+    filter: blur(0.1em);
+}
+
+.caption {
+    font-size: 0.5em;
+    text-align: left;
+    line-height: 1.3em;
+    font-family: var(--photo-caption);
+    color: var(--text-color);
+}
+
+picture .caption a, picture .caption a:visited {
+    color: var(--text-color);
 }
 
 footer {
@@ -385,6 +453,7 @@ footer a, footer a:visited {
 
 #news {
     grid-area: News;
+    padding: 0 20px 0 0;
 }
 
 #spotlights {
@@ -468,6 +537,10 @@ footer a, footer a:visited {
     text-align: left;
 }
 
+.right {
+    text-align: right;
+}
+
 .center {
     text-align: center;
 }
@@ -480,7 +553,6 @@ footer a, footer a:visited {
     padding: 10px;
     border-radius: 20px;
 }
-
 
 
 /* All of the above accounts for super small mobile screens.
