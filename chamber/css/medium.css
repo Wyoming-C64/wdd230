@@ -128,12 +128,12 @@
             "PictureGrid News";
     }
 
-    .discover-pictures picture {
+    .discover-pictures .picture {
         border: 1.0em solid white;
         transition: box-shadow 0.5s;
     }
 
-    .discover-pictures picture:hover {
+    .discover-pictures .picture:hover {
         box-shadow: 8px 8px 15px grey;
         transition: box-shadow 0.5s;
     }

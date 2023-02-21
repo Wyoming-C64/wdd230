@@ -76,7 +76,7 @@
         max-width: 600px;
     }
     
-    .discover-pictures picture {
+    .discover-pictures .picture {
         border: 1.0em solid white;
         max-width: 400px;
     }
