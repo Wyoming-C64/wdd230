@@ -65,4 +65,6 @@ function doDatevisited() {
     window.localStorage.setItem("scc-LastVisited", nowVisit.toString());
 }
 
-doDatevisited();
+if (document.getElementById("daysSinceField")) {
+    doDatevisited();
+}
