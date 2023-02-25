@@ -703,6 +703,10 @@ fieldset.submit {
     border-radius: 1em;
 }
 
+.hidden {
+    display: none;
+}
+
 .submitButton:hover {
     background-color: var(--bkg-color);
     cursor: pointer;
