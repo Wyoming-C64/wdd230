@@ -82,35 +82,35 @@
                 <form method="get" action="thankyou.html">
                     <fieldset>
                         <legend>Applicant Information</legend>
-                        <label class="top">First Name* <input type="text" name="fname" required title="You first name is required."></label>
-                        <label class="top">Last Name* <input type="text" name="lname" required title="Your last name is required."></label>
-                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required title="Please provide a valid email address."></label>
-                        <label class="top">Phone* <input type="tel" name="phone" placeholder="5558881234" required title="Please enter a 10-digit phone number."></label>
-                        <label class="top">Organization Name* <input type="text" name="org" required title="Your business/organization name is required."></label>
-                        <label class="top">Your Position Title<input type="text" name="position" pattern="[A-Za-z- ]{7,}" title="Your position title must be at least 7 characters. Instead of 'CEO', try 'Chief Executive Officer'."></label>
+                        <label class="top">First Name* <input type="text" name="fname" required title="You first name is required." tabindex="1"></label>
+                        <label class="top">Last Name* <input type="text" name="lname" required title="Your last name is required." tabindex="2"></label>
+                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required title="Please provide a valid email address." tabindex="3"></label>
+                        <label class="top">Phone* <input type="tel" name="phone" placeholder="5558881234" required title="Please enter a 10-digit phone number." tabindex="4"></label>
+                        <label class="top">Organization Name* <input type="text" name="org" required title="Your business/organization name is required." tabindex="5"></label>
+                        <label class="top">Your Position Title<input type="text" name="position" pattern="[A-Za-z- ]{7,}" title="Your position title must be at least 7 characters. Instead of 'CEO', try 'Chief Executive Officer'." tabindex="6"></label>
                     </fieldset>
 
                     <fieldset>
                         <legend id="membership">Membership Selection</legend>
                         <p>Click &#128712; or scroll to see details about each level.</p>
                         <p>Choose one*:</p>
-                        <label class="sbs"><input type="radio" name="memberLevel" value="nonprofit" required> Non-Profit Member&nbsp;<a href="#nonprofit">&#128712;</a></label>
-                        <label class="sbs"><input type="radio" name="memberLevel" value="bronze"> Bronze Member&nbsp;<a href="#bronze-level">&#128712;</a></label>
-                        <label class="sbs"><input type="radio" name="memberLevel" value="silver"> Silver Member&nbsp;<a href="#silver-level">&#128712;</a></label>
-                        <label class="sbs"><input type="radio" name="memberLevel" value="gold"> Gold Member&nbsp;<a href="#gold-level">&#128712;</a></label>
+                        <label class="sbs"><input type="radio" name="memberLevel" value="nonprofit" required tabindex="7"> Non-Profit Member&nbsp;<a href="#nonprofit">&#128712;</a></label>
+                        <label class="sbs"><input type="radio" name="memberLevel" value="bronze" tabindex="8"> Bronze Member&nbsp;<a href="#bronze-level">&#128712;</a></label>
+                        <label class="sbs"><input type="radio" name="memberLevel" value="silver" tabindex="9"> Silver Member&nbsp;<a href="#silver-level">&#128712;</a></label>
+                        <label class="sbs"><input type="radio" name="memberLevel" value="gold" tabindex="10"> Gold Member&nbsp;<a href="#gold-level">&#128712;</a></label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Optional Information</legend>
                         <label class="top">About Your Organization
-                            <textarea name="description" cols="50" rows="10"></textarea>
+                            <textarea name="description" cols="50" rows="10" tabindex="11"></textarea>
                         </label>
                     </fieldset>
                     <fieldset class="submit">
                         <legend class="hidden">Send this Data</legend>
                         <input type="hidden" id="loadDateTime" name="loadDateTime" value="">
                         <!-- <input type="hidden" id="submitDateTime" name="submitDateTime" value=""> -->
-                        <input class="submitButton" type="submit" value="Process My Application!">
+                        <input class="submitButton" type="submit" value="Process My Application!" tabindex="12">
                     </fieldset>
 
                 </form>

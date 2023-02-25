@@ -609,8 +609,11 @@ textarea {
     margin: 0;
 
     font-family: var(--photo-caption);
-    font-size: 0.7em;
-    
+    font-size: 0.7em;   
+}
+
+textarea:focus-visible {
+    outline: 3px solid var(--accent-color);
 }
 
 form label {
@@ -710,6 +713,10 @@ fieldset.submit {
 .submitButton:hover {
     background-color: var(--bkg-color);
     cursor: pointer;
+}
+
+.submitButton:focus-visible {
+    outline: 3px solid var(--accent-color);
 }
 
 .submitButton:active {
