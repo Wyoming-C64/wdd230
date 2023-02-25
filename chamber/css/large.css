@@ -54,12 +54,16 @@
     
     
     div#home {
-        margin: 1em;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
             "Evnt Hero Hero Spot"
             "Weat Hero Hero Spot"
             "Join News News Spot";
+    }
+
+    main p {
+        font-size: 0.8em;
+        line-height: 1.2em;
     }
 
 
@@ -145,4 +149,14 @@
         font-size: 1.7em;
     }
     
+/* ------------- FORMS -------------------- */
+    
+    .joinMain {
+        grid-template-columns: 20em 1fr 1fr;
+        grid-template-areas: 
+            "form nonprofit bronze-level"
+            "form silver-level gold-level"
+    }
+
+
 }

@@ -58,7 +58,7 @@
 
     <nav>  
         <ul id="primaryNav">
-            <li><a href="#">Discover</a></li>
+            <li><a href="discover.html">Discover</a></li>
             <li><a href="#">Directory</a></li>
             <li><a href="#">Join</a></li>    
             <li><a href="#">Products</a></li>
@@ -73,25 +73,28 @@
     <main>
         <div class="joinHead">
             <h2>Chamber of Commerce Membership Application</h2>
-            <p>Fields marked with * are required.</p>
         </div>
+        <p>Base organization fee is charged to all organizations at the desired level of membership and includes membership of up to four employees. Additional employees can be added at the rates indicated for each level. After sending this form, we will contact you to finalize your application and arrange for payment.</p>
+        <p class="center bold">Fields marked with * are required.</p>
+        
         <div class="joinMain">
             <div id="joinform">
                 <form method="get" action="thankyou.html">
                     <fieldset>
                         <legend>Applicant Information</legend>
-                        <label class="top">First Name* <input type="text" name="fname" required></label>
-                        <label class="top">Last Name* <input type="text" name="lname" required></label>
-                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                        <label class="top">Phone* <input type="tel" name="phone" placeholder="5558881234" required></label>
-                        <label class="top">Organization Name* <input type="text" name="org" required></label>
-                        <label class="top">Your Position Title<input type="text" name="position" pattern="[A-Za-z- ]{7,}" title="At least 7 characters. Instead of 'CEO', try 'Chief Executive Officer'."></label>
+                        <label class="top">First Name* <input type="text" name="fname" required title="You first name is required."></label>
+                        <label class="top">Last Name* <input type="text" name="lname" required title="Your last name is required."></label>
+                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required title="Please provide a valid email address."></label>
+                        <label class="top">Phone* <input type="tel" name="phone" placeholder="5558881234" required title="Please enter a 10-digit phone number."></label>
+                        <label class="top">Organization Name* <input type="text" name="org" required title="Your business/organization name is required."></label>
+                        <label class="top">Your Position Title<input type="text" name="position" pattern="[A-Za-z- ]{7,}" title="Your position title must be at least 7 characters. Instead of 'CEO', try 'Chief Executive Officer'."></label>
                     </fieldset>
 
                     <fieldset>
-                        <legend id="membership">Membership Level</legend>
+                        <legend id="membership">Membership Selection</legend>
                         <p>Click &#128712; or scroll to see details about each level.</p>
-                        <label class="sbs"><input type="radio" name="memberLevel" value="nonprofit"> Non-Profit Member&nbsp;<a href="#nonprofit">&#128712;</a></label>
+                        <p>Choose one*:</p>
+                        <label class="sbs"><input type="radio" name="memberLevel" value="nonprofit" required> Non-Profit Member&nbsp;<a href="#nonprofit">&#128712;</a></label>
                         <label class="sbs"><input type="radio" name="memberLevel" value="bronze"> Bronze Member&nbsp;<a href="#bronze-level">&#128712;</a></label>
                         <label class="sbs"><input type="radio" name="memberLevel" value="silver"> Silver Member&nbsp;<a href="#silver-level">&#128712;</a></label>
                         <label class="sbs"><input type="radio" name="memberLevel" value="gold"> Gold Member&nbsp;<a href="#gold-level">&#128712;</a></label>
@@ -99,13 +102,12 @@
 
                     <fieldset>
                         <label class="top">About Your Organization
-                            <textarea name="description" cols="50" rows="10">
-                            </textarea>
+                            <textarea name="description" cols="50" rows="10"></textarea>
                         </label>
                     </fieldset>
                     <fieldset class="submit">
                         <input type="hidden" id="loadDateTime" name="loadDateTime" value="">
-                        <input type="hidden" id="submitDateTime" name="submitDateTime" value="">
+                        <!-- <input type="hidden" id="submitDateTime" name="submitDateTime" value=""> -->
                         <input class="submitButton" type="submit" value="Process My Application!">
                     </fieldset>
 
@@ -113,19 +115,60 @@
             </div>
             <div id="nonprofit" class="join-description">
                 <h4>Non-Profit</h4>
-                <p>Enjoy all the benefits of being a X </p>
+                <p>Non-profit organizations enjoy the same benefits and services as Bronze level members, but at a discounted price. Proof of non-profit status is required when finalizing your application. Non-profits may also opt to register at a Silver or Gold level at a 20% reduced rate. Please call us directly to discuss this.</p>
+                <p><b>Organization Fee:</b><br>$100.00/year</p>
+                <p><b>Additional Members:</b><br>$25.00 / ea. / year</p>
+                <p><a href="#membership">Back to Membership Selection</a></p>
             </div>
             <div id="bronze-level" class="join-description">
                 <h4>Bronze Level</h4>
-                <p>Enjoy all the benefits of being a X </p>
+                <p>The Bronze Level is a great introductory memebrship option. Includes the following services and benefits: 
+                </p>
+                <ul>
+                    <li>Recognition as a supporting organization at chamber functions.</li>
+                    <li>Free 1/8 column advertising space in quarterly newsletter.</li>
+                    <li>Listed as a member business on chamber website.</li>
+                    <li>10% discount for booth space at networking events.</li>
+                </ul>
+                <p><b>Organization Fee:</b><br>$195.00 / year</p>
+                <p><b>Additional Members:</b><br>$35.00 / ea. / year</p>
+                <p><a href="#membership">Back to Membership Selection</a></p>
+                
             </div>
             <div id="silver-level" class="join-description">
                 <h4>Silver Level</h4>
-                <p>Enjoy all the benefits of being a X </p>
+                <p>The Silver Level demonstrates a higher level of support for the Chamber. The following services and benefits are included: 
+                </p>
+                <ul>
+                    <li>Recognition as a supporting organization at chamber functions.</li>
+                    <li>Free 1/4 column advertising space in quarterly newsletter.</li>
+                    <li>Discounts on 1/3 and 1/2 column ad spaces.</li>
+                    <li>Listed as a member business on chamber website.</li>
+                    <li>Placed in rotation for spotlight as Feature Member on chamber home page.</li>
+                    <li>20% discount for booth space at networking events.</li>
+                    <li>Preferred table seating at annual chamber gala and dinner event.</li>
+                </ul>
+                <p><b>Organization Fee:</b><br>$275.00 / year</p>
+                <p><b>Additional Members:</b><br>$40.00 / ea. / year</p>
+                <p><a href="#membership">Back to Membership Selection</a></p>
             </div>
             <div id="gold-level" class="join-description">
                 <h4>Gold Level</h4>
-                <p>Enjoy all the benefits of being a X </p>
+                <p>The Gold Level demonstrates the ultimate support for the Chamber. The following services and benefits are included: 
+                </p>
+                <ul>
+                    <li>Prominent recognition as a sponsor organization at chamber functions.</li>
+                    <li>Free 1/2 page advertising space in quarterly newsletter.</li>
+                    <li>Discounts on full page ad spaces.</li>
+                    <li>Listed as a member business on chamber website.</li>
+                    <li>Placed in rotation for spotlight as Feature Member on chamber home page.</li>
+                    <li>33% discount for booth space at networking events.</li>
+                    <li>20% discount for chamber-sponsored educational event registration.</li>
+                    <li>Exclusive table seating at annual chamber gala and dinner event.</li>
+                </ul>
+                <p><b>Organization Fee:</b><br>$400.00 / year</p>
+                <p><b>Additional Members:</b><br>$50.00 / ea. / year</p>
+                <p><a href="#membership">Back to Membership Selection</a></p>
             </div>
 
         </div>

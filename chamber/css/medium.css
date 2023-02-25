@@ -139,5 +139,21 @@
     }
 
 
+/* ------------- FORMS -------------------- */
+    
+    .joinMain {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "form nonprofit"
+            "form bronze-level"
+            "form silver-level"
+            "form gold-level";
+    }
+
+    
+    .join-description {
+        font-size: 0.8em;
+    }
+
 
 }

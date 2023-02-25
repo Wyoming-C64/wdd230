@@ -219,6 +219,7 @@ nav a:hover {
 
 main {
     margin: 0.2em;
+    padding: 1em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -238,13 +239,19 @@ h4, h5, h6 {
     font-weight: 500;
 }
 
-main p, main ul, main li {
-    font-size: 1.1rem;
-    line-height: 1.2rem;
-}
-
 p, ul, ol {
     margin-top: 0.2em;
+}
+
+main p {
+    font-size: 1.0em;
+    line-height: 1.1em;
+    text-align: left;
+}
+
+main ul, main li {
+    font-size: 0.9em;
+    line-height: 1.0em;
 }
 
 main li {
@@ -543,6 +550,10 @@ footer a, footer a:visited {
     text-align: center;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .placeholder {
     display: inline-block;
     background-color: var(--accent-color);
@@ -551,6 +562,205 @@ footer a, footer a:visited {
     padding: 10px;
     border-radius: 20px;
 }
+
+
+/* ------------- FORMS -------------------- */
+
+.joinHead {
+    text-align: center;
+}
+
+.joinMain {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "form"
+        "nonprofit"
+        "bronze-level"
+        "silver-level"
+        "gold-level";
+    max-width: 100%;
+}
+
+
+#joinform {
+    grid-area: form;
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    margin: 0em auto;
+    max-width: 25rem;
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+}
+
+fieldset {
+    padding: 0px;
+}
+
+textarea {
+    display: block;
+    box-sizing: border-box;
+    border: 3px dotted var(--primary-color);
+    padding: 10px;
+    margin: 0;
+
+    font-family: var(--photo-caption);
+    font-size: 0.7em;
+    
+}
+
+form label {
+    /* font-family: var(--photo-caption); */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form label.top {
+    display: block;
+    margin-top: 2rem;
+    color: var(--primary-color)
+}
+
+form label.top:nth-child(2) {
+    margin-top: 0.5em;
+}
+
+form label.top input[type="text"], 
+form label.top input[type="tel"],
+form label.top input[type="email"] {
+    
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 10px;
+
+    font-family: var(--photo-caption);
+    font-size: 0.9rem;
+    
+    border: none;
+    border-bottom: 2px dashed var(--primary-color);
+    background-color: transparent;
+    color: #333;
+}
+
+
+form label.top input:focus-visible {
+    outline: none;
+    background-color: var(--secondary-color);
+    color: black;
+    /* box-shadow: 0 0 20px; */
+    /* border: none; */
+}
+
+
+form label.sbs input {
+    accent-color: var(--accent-color);   
+}
+
+
+fieldset {
+    border: none;
+    line-height: 1em;
+}
+
+fieldset legend {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 1em;
+
+    text-align: center;
+    font-weight: bold;
+
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+}
+
+fieldset:first-child legend {
+    margin-top: 0;
+}
+
+fieldset.submit {
+    text-align: center;
+}
+.submitButton {
+    margin: 1rem auto;
+    padding: 0.5em 0.8em;
+    
+    background-color: var(--secondary-color);
+    color: black;
+        
+    font-size: 0.7em;
+    font-weight: bold;
+
+    box-shadow: 5px 5px 10px #00000088;
+    border: 1px solid var(--accent-color);
+    border-radius: 1em;
+}
+
+.submitButton:hover {
+    background-color: var(--bkg-color);
+    cursor: pointer;
+}
+
+.submitButton:active {
+    box-shadow: 0px 0px 10px #00000088;
+}
+
+form label.sbs {
+    display: block;
+    padding: 0.50rem;
+    color: #555;
+}
+
+
+form label.sbs input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.join-description {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#nonprofit {
+    grid-area: nonprofit;
+    border: 20px solid rgba(144,238,144,0.5);
+    background-color: rgba(144,238,144,0.3);
+}
+
+#bronze-level {
+    grid-area: bronze-level;
+    border: 20px solid  rgb(205,127,50,0.5);
+    background-color: rgba(205,127,50,0.3);
+}
+
+#silver-level {
+    grid-area: silver-level;
+    border: 20px solid  rgb(192,192,192,0.5);
+    background-color: rgba(192,192,192,0.3);
+}
+
+#gold-level {
+    grid-area: gold-level;
+    border: 20px solid rgb(255,200,0,0.5);
+    background-color: rgba(255,200,0,0.3);
+}
+
+
 
 
 /* All of the above accounts for super small mobile screens.

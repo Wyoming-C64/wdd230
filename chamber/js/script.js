@@ -65,6 +65,19 @@ function doDatevisited() {
     window.localStorage.setItem("scc-LastVisited", nowVisit.toString());
 }
 
+
+function doLoadTime() {
+    loadTimeField = document.getElementById("loadDateTime");
+    const rightNow = Date();
+    loadTimeField.value = rightNow.toLocaleString('en-US');
+}
+
 if (document.getElementById("daysSinceField")) {
     doDatevisited();
+}
+
+if (document.getElementById("loadDateTime")) {
+    doLoadTime();
+    // Possibly add an event handler for populating 
+    // submitTime when submit button gets mashed.
 }
