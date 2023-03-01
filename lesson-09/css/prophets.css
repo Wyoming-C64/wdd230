@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+h1 {
+    display: block;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;   
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+    padding: 0;
+    margin: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    gap: 1em;
+
+    box-shadow: 0 0 30px #22222288;
+    box-sizing: border-box;
+    padding: 1em;
+
+    background-color: lightgrey;
+    justify-content: center;
+    justify-items: center;
+}
+
+.cards section {
+    display: block;
+    width: 100%;
+    
+    box-sizing: border-box;
+    background-color: lightsteelblue;
+    box-shadow: 5px 5px 20px #222222;
+    text-align: center;
+    /* line-height: 0.5rem; */
+    padding: 1rem 0;
+    border: 1px solid #333;
+}
+
+div.cards section h2 {
+    margin-bottom: 1.75rem;
+    font-family: 'Special Elite', 'Courier New', Courier, serif;
+}
+
+div.cards section p {
+    font-family: 'Special Elite', 'Courier New', Courier, serif;
+}
+
+div.cards img {
+    
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 1em;
+}
