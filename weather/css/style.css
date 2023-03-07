@@ -1,0 +1,43 @@
+body {
+    color: #ffdd00;
+    background: black;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    display: block;
+    text-align: center;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 2em;
+    background-color: #332200;
+}
+
+.location {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+img {
+    background-color: #6bceef;
+    border-radius: 64px;
+    box-shadow: 0px 0px 15px white;
+    margin: 0.5em;
+}
+
+#weatherCondition {
+    text-transform: capitalize;
+}
+
+#windSpeed, #currentTemp, #windChill {
+    font-weight: bold;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 8px;
+    box-shadow: 0px 0px 10px #00ff00;
+    background-color: #004400;
+}
