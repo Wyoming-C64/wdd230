@@ -774,6 +774,120 @@ form label.sbs input[type="radio"] {
 
 
 
+/**********************************************************
+*
+* Definitions intended specifically for the Directory Page 
+* 
+***********************************************************/
+
+.directory {
+    display: flex;
+    flex-direction: column;
+}
+
+.dir-menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: var(--secondary-color);
+	text-align: center;
+    grid-area: dirmenu;
+}
+
+.dir-menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+span.bigger {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.directory article,
+.directory section {
+	margin: 0.5rem;
+}
+
+.directory section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #ccc;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	align-items: center;
+}
+
+.grid section {
+	flex-direction: column;
+	text-align: center;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.directory .list section:nth-child(even) {
+	background-color: #bed;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.9rem;
+}
+
+.directory img {
+	height: 75px;
+	max-width: 100%; /* Images are jerks - Seattle*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* All of the above accounts for super small mobile screens.
 I suspect that most mobile devices will apply the following rules, but
 this is just to be safe as the layout gets pretty crammed in smaller screens.

@@ -1,5 +1,13 @@
 const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
 
+async function getProphetData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    // console.table(data.prophets);
+    displayProphets(data.prophets);
+}
+
+getProphetData();
 
 const displayProphets = (prophets) => {
     const cards = document.querySelector('div.cards');
@@ -55,12 +63,13 @@ const displayProphets = (prophets) => {
     }); // end forEach
 }   // end of displayProphets()
 
-
-async function getProphetData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.table(data.prophets);
-    displayProphets(data.prophets);
+function doSomeStuff() {
+    const newVariable = fetch(url);
+    giveMeAlert();
 }
 
-getProphetData();
+doSomeStuff();
+
+var giveMeAlert = function() {
+    console.log("This is your courtesy alert.")
+}
