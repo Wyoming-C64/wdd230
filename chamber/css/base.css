@@ -219,7 +219,6 @@ nav a:hover {
 
 main {
     margin: 0.2em;
-    padding: 1em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -244,8 +243,8 @@ p, ul, ol {
 }
 
 main p {
-    font-size: 1.0em;
-    line-height: 1.1em;
+    font-size: 1.0rem;
+    line-height: 1.1rem;
     text-align: left;
 }
 
@@ -298,12 +297,12 @@ div#discover {
     grid-gap: 1.5em;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 0 1em;
+    padding: 0 0em;
     margin: 1em 0;
     max-width: 100%;
 }
 
-.discover-pictures .picture {
+.picture {
     border: 4vw solid white;
     background: white;
     box-sizing: border-box;
@@ -405,8 +404,6 @@ footer a, footer a:visited {
     font-size: 0.75em;
 
 }
-
-
 
 
 /********************************
@@ -780,45 +777,63 @@ form label.sbs input[type="radio"] {
 * 
 ***********************************************************/
 
-.directory {
+#directory {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#directory article h3 {
+    display: none;
 }
 
 .dir-menu {
-	margin: 1rem auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+	margin: 0.5rem 0;
 	padding: 0.5rem;
-	background-color: var(--secondary-color);
 	text-align: center;
     grid-area: dirmenu;
 }
 
 .dir-menu button {
-	padding: 1rem;
+	padding: 0.5rem;
 	font-weight: 700;
 }
 
-span.bigger {
-    font-size: 1.1em;
-    font-weight: normal;
-}
 
-.directory article,
-.directory section {
+
+#directory article {
+    margin: 0;
+}
+#directory section {
 	margin: 0.5rem;
 }
 
-.directory section {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	background-color: #ccc;
+#directory section {
+    border: 1px solid #000;
+	padding: 1rem;
+	background-color: var(--bkg-color);
+    text-align: center;
+    
+}
+
+#directory h4 {
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+#directory p {
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
 }
 
 .grid section {
@@ -830,10 +845,6 @@ span.bigger {
 	margin: 0.1rem;
 }
 
-.grid h3 {
-	font-family: "Caveat", cursive;
-}
-
 .list {
 	display: flex;
 	flex-direction: column;
@@ -841,7 +852,7 @@ span.bigger {
 
 .list section {
 	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	margin: 0;
 	padding: 0.25rem;
 }
@@ -856,11 +867,15 @@ span.bigger {
 
 .list section h3 {
 	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
 }
 
-.directory .list section:nth-child(even) {
-	background-color: #bed;
+#directory .list section:nth-child(even) {
+	background-color: white;
+}
+
+#directory .list section:nth-child(odd) {
+    background-color: rgba(255, 216, 138, 0.2);
+
 }
 
 section h3 {
@@ -868,11 +883,10 @@ section h3 {
 }
 
 section a {
-	font-family: "Roboto", Arial, sans-serif;
-	font-size: 0.9rem;
+    	font-size: 0.9rem;
 }
 
-.directory img {
+#directory img {
 	height: 75px;
 	max-width: 100%; /* Images are jerks - Seattle*/
 }
@@ -908,3 +922,17 @@ this is just to be safe as the layout gets pretty crammed in smaller screens.
     }
     
 }
+
+
+/* This seems to apply only to the directory page for now. */
+@media only screen and (min-width: 500px) {
+
+    .list section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        padding: 0.25rem;
+    }
+    
+}
+

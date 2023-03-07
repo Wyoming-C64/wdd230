@@ -1,12 +1,29 @@
+const gridbutton = document.querySelector("#grid-button");
+const listbutton = document.querySelector("#list-button");
+const display = document.querySelector("article");
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
+
+function showGrid() {
+	display.classList.add("grid");
+	display.classList.remove("list");
+}
+
+gridbutton.addEventListener("click", showGrid);
+listbutton.addEventListener("click", showList); 
+
 const url = 'json/data.json';
 
 function displayDirectory(directory) {
-    const cards = document.querySelector('div.cards');
-    let count = 1;
+    
     directory.forEach((org) => {
         // Create the elements to put in the div.cards element
         let card = document.createElement('section');
-        let h2 = document.createElement('h2');
+        card.setAttribute('class', 'picture');
+        let h4 = document.createElement('h4');
         let logo = document.createElement('img');
         let streetAddress = document.createElement('p');
         let phone = document.createElement('p');
@@ -17,14 +34,14 @@ function displayDirectory(directory) {
 
         // Build the h2 content to show the organization's name
 
-        h2.textContent = org.name;
+        h4.textContent = org.name;
 
         // Some details
 
-        document.getElementById("me").innerHTML
+        h4.textContent = org.name;
         streetAddress.textContent =org.address;
         phone.textContent = org.phone;
-        webUrl.innerHTML = `<a href="${org.url}" target="_blank">${org.url}</a>`;
+        webUrl.innerHTML = `<a href="#" target="_blank">${org.url}</a>`;
         memberLevel.textContent = `${org.level} Member`;
 
         // Build the image portrait by using the relevant attributes
@@ -33,19 +50,19 @@ function displayDirectory(directory) {
         logo.setAttribute('alt', `Logo ${org.name}`);
         logo.setAttribute('title', `${org.name}`)
         logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '100');
-        logo.setAttribute('height', '100');
+        logo.setAttribute('width', '150');
+        logo.setAttribute('height', '150');
 
         // Append all this to the card elements. 
         card.appendChild(logo);
-        card.appendChild(h2);
+        card.appendChild(h4);
+        card.appendChild(webUrl);
         card.appendChild(streetAddress);
         card.appendChild(phone);
         card.appendChild(memberLevel);
 
         // Attach all cards to our master card element. 
-        cards.appendChild(card)
-        count++;
+        display.appendChild(card)
     }); // end forEach
 }   // end of displayProphets()
 
@@ -54,7 +71,7 @@ async function getDirectoryData() {
     const response = await fetch(url);
     const data = await response.json();
     console.table(data.directory);
-    // displayProphets(data.prophets);
+    displayDirectory(data.directory);
 }
 
 getDirectoryData();

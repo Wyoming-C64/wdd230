@@ -6,7 +6,7 @@
         "address": "1234 Long Street",
         "phone": "(307) 546-2141",
         "level": "Gold",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Nancy's Candies",
@@ -14,7 +14,7 @@
         "address": "5678 Short Street",
         "phone": "(307) 303-3650",
         "level": "Bronze",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Hades Real Esate",
@@ -22,7 +22,7 @@
         "address": "98 Main Street",
         "phone": "(307) 717-4072",
         "level": "Gold",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "images/hades-real-estate.svg"
     },
     {
         "name": "Zephyr Diner",
@@ -30,7 +30,7 @@
         "address": "78 Central Ave.",
         "phone": "(307) 558-8948",
         "level": "Silver",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "images/zephyr-rest-logo.svg"
     },
     {
         "name": "Black Hills Tours",
@@ -38,7 +38,7 @@
         "address": "1100 E. 7th Street",
         "phone": "(307) 667-1444",
         "level": "Silver",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Wyoming Workforce Services",
@@ -46,7 +46,7 @@
         "address": "101 Main Street Suite 210",
         "phone": "(307) 757-5416",
         "level": "Non-Profit",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Old Stoney Museum",
@@ -54,7 +54,7 @@
         "address": "1000 W. Maple Ave.",
         "phone": "(307) 219-6618",
         "level": "Non-Profit",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Vore Buffalo Pit",
@@ -62,7 +62,7 @@
         "address": "3000 East I90 Service Road",
         "phone": "(308) 669-4796",
         "level": "Bronze",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     },
     {
         "name": "Dewy, Cheatam & Howe, LLP",
@@ -70,7 +70,7 @@
         "address": "305 Main Street",
         "phone": "(309) 603-5721",
         "level": "Gold",
-        "logo": "https://placebeard.it/100/notag"
+        "logo": "https://placebeard.it/150/100/notag"
     }
   ]
 }

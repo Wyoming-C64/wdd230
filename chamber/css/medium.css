@@ -46,6 +46,10 @@
         font-size: 1.1em;
     }
 
+    main {
+        padding: 1em;
+    }
+
     div#home {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -128,15 +132,36 @@
             "PictureGrid News";
     }
 
-    .discover-pictures .picture {
-        border: 1.0em solid white;
-        transition: box-shadow 0.5s;
+    .discover-pictures {
+        padding: 0 1em;
     }
 
-    .discover-pictures .picture:hover {
+    .discover-pictures .picture {
+        border: 1.0em solid white;
+    }
+
+    .picture:hover {
         box-shadow: 8px 8px 15px grey;
         transition: box-shadow 0.5s;
     }
+
+/* ------------ DIRECTORY ----------------- */
+
+.grid {
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+#directory p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
 
 
 /* ------------- FORMS -------------------- */
