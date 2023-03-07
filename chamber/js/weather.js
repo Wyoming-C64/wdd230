@@ -1,5 +1,9 @@
 // OpenWeatherMap API Key - 8919aa73725d124e224d2d89ade3b590
 
+const city = 'Sundance';
+const state = 'WY';
+// document.getElementById('city').textContent = city;
+// document.getElementById('state').textContent = state;
 const currentTemp = document.getElementById('currentTemp');
 const currentTempValue = parseFloat(currentTemp.innerText);
 
@@ -10,7 +14,7 @@ const windSpeed = document.getElementById('windSpeed');
 const windSpeedValue = parseFloat(windSpeed.innerText);
 const windChill = document.getElementById('windChill');
 
-const url = "https://api.openweathermap.org/data/2.5/weather?q=Sundance&state=WY&units=imperial&appid=8919aa73725d124e224d2d89ade3b590";
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&state=${state}&units=imperial&appid=8919aa73725d124e224d2d89ade3b590`;
 
 
 function calcWindChill(fahrTemp, speedMPH) {
@@ -24,7 +28,7 @@ function calcWindChill(fahrTemp, speedMPH) {
             0.6215 * fahrTemp - 
             35.75 * speedMPH ** 0.16 + 
             0.4275 * fahrTemp * speedMPH ** 0.16);
-        result = windChill.toFixed(1);
+        result = `${windChill.toFixed(1)} &deg;F`;
     }
     
     return result;
@@ -36,31 +40,46 @@ function windDirSpeedStr(bearing, speed) {
     // the compass into 16 sections of 22.5 degrees. The
     // array is 0-based (0-15). 
     const compass = [
-        'N','NNE','NE','ENE',
-        'E','ESE','SE','SSE',
-        'S','SSW','SW','WSW',
-        'W','WNW','NW','NNW',
+        'N&nbsp;','NNE&nbsp;','NE&nbsp;','ENE&nbsp;',
+        'E&nbsp;','ESE&nbsp;','SE&nbsp;','SSE&nbsp;',
+        'S&nbsp;','SSW&nbsp;','SW&nbsp;','WSW&nbsp;',
+        'W&nbsp;','WNW&nbsp;','NW&nbsp;','NNW&nbsp;',
+        'N&nbsp;',''
     ];
 
     // Calculate the simplified direction by dividing the azimuth angle by 22.5, round to the nearest integer, then bitwise AND to limit the result to a number between 0 and 15. ('North' could theoretically be either 0 or 16).
-    const dirIndex = Math.round(bearing/22.5) & 15;
+    let dirIndex = Math.round(bearing/22.5) & 15;
 
-    const windString = compass[dirIndex] + "&nbsp;" + speed.toFixed(1);
+    if (speed == 0) {
+        dirIndex = 17;
+    }
+
+    const windString = `${compass[dirIndex]}${speed.toFixed(1)} mph `;
 
     return windString;
 }
 
-
+// function toTitleCase(theString) {
+//     // Unfortunately, JS doesn't have a built-in toTitleCase, so here is a solution function.
+//     // Take any string, capitalize only the first letter of each word (after a space) and make all others lower case.
+//     // I wrote this, but then decided against using it in favor of a CSS property that does the same thing and has been supported by most browsers for a very long time.
+//     // I feel better about changing it on the display side rather than changing actual data. 
+//     const theWords = theString.split(" ");
+//     for (let i=0; i< theWords.length; i++) {
+//         theWords[i] = theWords[i][0].toUpperCase() + theWords[i].substr(1).toLowerCase();
+//     }
+//     return theWords.join(" ");
+// }
 
 function displayResults(weatherData) {
     // Get the current temperature and stuff it into our
     // temperature HTML element.
     temp = weatherData.main.temp;
-    currentTemp.textContent = `${temp.toFixed(1)}`;
+    currentTemp.innerHTML = `${temp.toFixed(1)} &deg;F`;
 
     // Build a URL to the proper icon image, using the 
     // filename returned by the API.
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
 
     // Build simple variables to reference the data we want.
     const desc = weatherData.weather[0].description;
@@ -85,7 +104,7 @@ async function apiFetch() {
         if (response.ok) {
             // Store the returning data.
             const data = await response.json();
-            console.log(data); // For testing.
+            // console.log(data); // For testing.
             displayResults(data);
         } else {
             // Server returned an error... No data.
