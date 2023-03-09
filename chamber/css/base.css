@@ -468,8 +468,11 @@ footer a, footer a:visited {
 }
 
 .spot-logo {
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     max-width: 80%;
+}
+
+.lr-shadow {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .spot-contact {
@@ -502,7 +505,9 @@ footer a, footer a:visited {
 
 #weatherIcon {
     /* border-top: 1px solid var(--accent-color); */
-    border-bottom: 1px solid var(--accent-color);
+    /* border-bottom: 1px solid var(--accent-color); */
+    background-color: lightblue;
+    border-radius: 40em;
 }
 
 #weatherCondition {
@@ -887,16 +892,9 @@ section a {
 }
 
 #directory img {
-	height: 75px;
-	max-width: 100%; /* Images are jerks - Seattle*/
+	height: 100px;
+	max-width: 100%;
 }
-
-
-
-
-
-
-
 
 
 

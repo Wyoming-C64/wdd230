@@ -4,19 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike Lewis">
+    <meta name="description" content="The Sundance Chamber of Commerce website.">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Balthazar&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Balthazar&family=Special+Elite&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/base.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+
+    <title>Sundance Chamber of Commerce: Credits</title>
 </head>
 <body>
+
+    <!-- *************************** HEADER ******************************** -->
+
+    <header>
+        <div class="identity">
+            <picture>
+                <a href="index.html">
+                    <img class="header-logo" src="images/sundance_logo.svg" alt="Fictional Sundance Wyoming logo.">
+                </a>
+            </picture>
+            <section class="branding-text">
+                <h1>Sundance</h1>
+                <div class="subhead">Chamber of Commerce</div>
+            </section>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <div class="social-icon">
+                    <img src="images/f_logo_RGB-Blue_58.png" alt="Facebook logo">
+                </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <div class="social-icon">
+                    <img src="images/li-in-bug-transedge.png" alt="Linked In logo">
+                </div>
+            </a>
+        </div>
+        <div class="menu-button">
+            <button id="hamburgerBtn"><span>&#9776;</span><span>&#128940;</span></button>
+        </div>
+        <div class="date">
+            <span id="todayDate">Today is the day that it is.</span>
+        </div>
+    </header>
+
+    <nav>  
+        <ul id="primaryNav">
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>    
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="social-menu"><a href="https://facebook.com" target="_blank">Our Facebook</a></li>
+            <li class="social-menu"><a href="https://linkedin.com" target="_blank">Our LinkedIn</a></li>
+        </ul>
+    </nav>
+    <div id="alertBar">&#129309;&#127995; Be sure to join us for meet and greet Wednesday at 7:00 PM!</div>
+
+    <!-- *************************** MAIN ********************************** -->
+
     <main>
-        <p>Mock business logos designed by other people, so don't give me any credit for them:</p>
+        <h2>Attributions For Works Used</h2>
+        <p>Credit goes where credit is due. There's no way I could have come up with each and every piece of content all on my own, even if this were a <i>real</i> website. The following people and/or organizations deserve credit for their excellent work.</p>
+        <h3>APIs</h3>
+        <ul>
+            <li>
+                <em>Current Weather</em> - Information is dynamically provided by the <a href="https://openweathermap.org/api" target="_blank">Weather API</a> from <a href="https://openweathermap.org" target="_blank">OpenWeatherMap.org</a>. 
+            </li>
+            <li>
+                <em>Company Directory</em> ... Oh wait, I hand-coded that data myself.
+            </li>
+        </ul>
+        <h3>Mock Business Logos (Main Page and Directory)</h3>
         <ul>
             <li>
                 <em>Restaurant Retro Logo</em> - Image by <a href="https://www.freepik.com/free-vector/restaurant-retro-logo-template-collection_6206178.htm#query=restaurant%20logo&position=29&from_view=keyword">Freepik</a>
+            </li>
+            <li>
+                <em>Elegant Real Estate Logo</em> - Image by <a href="https://www.freepik.com/free-vector/elegant-real-estate-logo-template_31842431.htm#query=real%20estate%20logo&position=34&from_view=search&track=ais">Freepik</a>
+            </li>
+        </ul>
+        <h3>Photographs</h3>
+        <ul>
+            <li>
+                Photographs on the Discover page all came from the <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a> and are credited appropriately on the Discover page, with links to licenses where appropriate.
             </li>
             <li>
                 <em>Elegant Real Estate Logo</em> - Image by <a href="https://www.freepik.com/free-vector/elegant-real-estate-logo-template_31842431.htm#query=real%20estate%20logo&position=34&from_view=search&track=ais">Freepik</a>

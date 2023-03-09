@@ -28,7 +28,7 @@ function calcWindChill(fahrTemp, speedMPH) {
             0.6215 * fahrTemp - 
             35.75 * speedMPH ** 0.16 + 
             0.4275 * fahrTemp * speedMPH ** 0.16);
-        result = `${windChill.toFixed(1)} &deg;F`;
+        result = `${windChill.toFixed(1)}`;
     }
     
     return result;
@@ -54,7 +54,7 @@ function windDirSpeedStr(bearing, speed) {
         dirIndex = 17;
     }
 
-    const windString = `${compass[dirIndex]}${speed.toFixed(1)} mph `;
+    const windString = `${compass[dirIndex]}${speed.toFixed(1)}`;
 
     return windString;
 }
@@ -75,12 +75,19 @@ function displayResults(weatherData) {
     // Get the current temperature and stuff it into our
     // temperature HTML element.
     temp = weatherData.main.temp;
-    currentTemp.innerHTML = `${temp.toFixed(1)} &deg;F`;
+    currentTemp.innerHTML = `${temp.toFixed(1)}`;
 
     // Build a URL to the proper icon image, using the 
     // filename returned by the API.
     const iconsrc = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
-
+    
+    // Set the image background to be reflective of sky conditions. Anything over level 04 
+    // is considered stormy grey skies. Otherwise, use light blue.
+    let backgroundColor = "lightblue";
+    let weatherLevel = parseInt(weatherData.weather[0].icon.match(/(\d{2,})[dn]/g));
+    if (weatherLevel > 3) {
+        backgroundColor = "#BBBBBB";
+    }
     // Build simple variables to reference the data we want.
     const desc = weatherData.weather[0].description;
     const speed = weatherData.wind.speed;
@@ -89,6 +96,7 @@ function displayResults(weatherData) {
     // Set our HTML icon element and description elements.
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+    weatherIcon.style.backgroundColor = backgroundColor;
     captionDesc.textContent = desc;
 
     windSpeed.innerHTML = windDirSpeedStr(dir, speed);
