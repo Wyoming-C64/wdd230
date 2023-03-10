@@ -31,7 +31,7 @@ body {
     background-color: var(--bkg-color);
     color: var(--text-color);
     font-family: var(--body-text-font);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.8rem;
 }
 
@@ -62,8 +62,8 @@ header {
     display: flex; 
     min-width: 240px;
     align-items: center;
-    align-content: center;
-    justify-items: start;
+    align-content: baseline;
+    justify-content: start;
     flex-direction: row;
 }
 
@@ -75,6 +75,8 @@ header {
 
 .branding-text {
     margin: 0 0;
+    align-content: baseline;
+    align-items: baseline;
 }
 
 .branding-text h1 {
@@ -218,7 +220,7 @@ nav a:hover {
 
 
 main {
-    margin: 0.2em;
+    margin: 0.5em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -244,13 +246,13 @@ p, ul, ol {
 
 main p {
     font-size: 1.0rem;
-    line-height: 1.1rem;
+    line-height: 1.3rem;
     text-align: left;
 }
 
 main ul, main li {
     font-size: 0.9em;
-    line-height: 1.0em;
+    line-height: 1.3em;
 }
 
 main li {
@@ -328,7 +330,10 @@ div#discover {
     color: var(--text-color);
 }
 
-.picture .caption a, .picture .caption a:visited {
+picture .caption a, 
+picture .caption a:visited,
+.picture .caption a, 
+.picture .caption a:visited {
     color: var(--text-color);
 }
 
@@ -419,7 +424,6 @@ footer a, footer a:visited {
 
 .hero-img {
     display: block;
-    overflow: clip;
 }
 
 .hero-img img {

@@ -7,7 +7,7 @@
 
     .header-logo {
         width: auto;
-        height: 140px;
+        height: 90px;
         margin-right: 20px;
     }
 
@@ -62,11 +62,6 @@
         grid-gap: 0.5em;
         margin-left:0.5em;
         margin-right:0.5em;
-    }
-    
-    p {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
     }
 
     #join {   
@@ -124,9 +119,10 @@
         
     }
 
+/* -------------- DISCOVER ------------------- */
+
     div#discover {
         margin: 2em 0;
-        /* grid-gap: 1.0em; */
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "PictureGrid News";
@@ -134,6 +130,7 @@
 
     .discover-pictures {
         padding: 0 1em;
+
     }
 
     .discover-pictures .picture {
@@ -142,7 +139,9 @@
 
     .picture:hover {
         box-shadow: 8px 8px 15px grey;
+        transform: rotate(0);
         transition: box-shadow 0.5s;
+
     }
 
 /* ------------ DIRECTORY ----------------- */

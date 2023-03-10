@@ -17,6 +17,23 @@ const windChill = document.getElementById('windChill');
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&state=${state}&units=imperial&appid=8919aa73725d124e224d2d89ade3b590`;
 
 
+// function toTitleCase(theString) {
+//     // Unfortunately, JS doesn't have a built-in toTitleCase, so here is a solution function.
+//     // Take any string, capitalize only the first letter of each word (after a space) and make 
+//     // all others lower case.
+//     //
+//     // I wrote this, but then decided against using it in favor of a CSS property that does the 
+//     // same thing and has been supported by most browsers for a very long time. I feel better 
+//     // about changing it as a display action rather than changing actual data. 
+//     //
+//     const theWords = theString.split(" ");
+//     for (let i=0; i< theWords.length; i++) {
+//         theWords[i] = theWords[i][0].toUpperCase() + theWords[i].substr(1).toLowerCase();
+//     }
+//     return theWords.join(" ");
+// }
+
+
 function calcWindChill(fahrTemp, speedMPH) {
     let result = "N/A";
     
@@ -59,17 +76,6 @@ function windDirSpeedStr(bearing, speed) {
     return windString;
 }
 
-// function toTitleCase(theString) {
-//     // Unfortunately, JS doesn't have a built-in toTitleCase, so here is a solution function.
-//     // Take any string, capitalize only the first letter of each word (after a space) and make all others lower case.
-//     // I wrote this, but then decided against using it in favor of a CSS property that does the same thing and has been supported by most browsers for a very long time.
-//     // I feel better about changing it on the display side rather than changing actual data. 
-//     const theWords = theString.split(" ");
-//     for (let i=0; i< theWords.length; i++) {
-//         theWords[i] = theWords[i][0].toUpperCase() + theWords[i].substr(1).toLowerCase();
-//     }
-//     return theWords.join(" ");
-// }
 
 function displayResults(weatherData) {
     // Get the current temperature and stuff it into our
@@ -85,7 +91,8 @@ function displayResults(weatherData) {
     // is considered stormy grey skies. Otherwise, use light blue.
     let backgroundColor = "lightblue";
     let weatherLevel = parseInt(weatherData.weather[0].icon.match(/(\d{2,})[dn]/g));
-    if (weatherLevel > 3) {
+    let weatherID = parseInt(weatherData.weather[0].id);
+    if (weatherID == 803 || weatherID == 804 || weatherLevel > 4) {
         backgroundColor = "#BBBBBB";
     }
     // Build simple variables to reference the data we want.
@@ -112,7 +119,7 @@ async function apiFetch() {
         if (response.ok) {
             // Store the returning data.
             const data = await response.json();
-            // console.log(data); // For testing.
+            console.log(data); // For testing.
             displayResults(data);
         } else {
             // Server returned an error... No data.
